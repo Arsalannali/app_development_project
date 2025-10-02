@@ -1,0 +1,33 @@
+[
+  {
+    "job_id": 1,
+    "title": "Software Developer",
+    "department": "IT",
+    "description": "We are looking for an experienced software developer to join our IT team. The ideal candidate should have strong programming skills and experience with web development.",
+    "requirements": "Bachelor's degree in Computer Science or related field, 2+ years of experience in web development, knowledge of Python/Flask, HTML, CSS, JavaScript",
+    "salary_range": "60000-80000",
+    "location": "Karachi",
+    "employment_type": "Full-time",
+    "experience_level": "Mid-level",
+    "status": "Active",
+    "posted_date": "2025-01-15",
+    "application_deadline": "2025-02-15",
+    "posted_by": 1
+  },
+  {
+    "job_id": 2,
+    "title": "HR Officer",
+    "department": "HR",
+    "description": "We need a dedicated HR Officer to manage employee relations, recruitment, and HR operations.",
+    "requirements": "Bachelor's degree in HR or related field, 1+ years of HR experience, strong communication skills, knowledge of labor laws",
+    "salary_range": "45000-60000",
+    "location": "Karachi",
+    "employment_type": "Full-time",
+    "experience_level": "Entry-level",
+    "status": "Active",
+    "posted_date": "2025-01-10",
+    "application_deadline": "2025-02-10",
+    "posted_by": 1
+  }
+]
+

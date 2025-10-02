@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}System Settings - Bareera Intl. HR Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-10 mx-auto">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">
+                    <i class="bi bi-gear"></i> System Settings
+                </h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('settings') }}">
+                    <!-- Company Information Section -->
+                    <div class="mb-4">
+                        <h5 class="text-primary border-bottom pb-2">
+                            <i class="bi bi-building"></i> Company Information
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="company_name" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company_name" name="company_name" 
+                                       value="{{ settings.company_info.company_name }}" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="company_email" class="form-label">Company Email</label>
+                                <input type="email" class="form-control" id="company_email" name="company_email" 
+                                       value="{{ settings.company_info.company_email }}" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="company_phone" class="form-label">Company Phone</label>
+                                <input type="text" class="form-control" id="company_phone" name="company_phone" 
+                                       value="{{ settings.company_info.company_phone }}" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="company_address" class="form-label">Company Address</label>
+                                <input type="text" class="form-control" id="company_address" name="company_address" 
+                                       value="{{ settings.company_info.company_address }}" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Working Hours Section -->
+                    <div class="mb-4">
+                        <h5 class="text-primary border-bottom pb-2">
+                            <i class="bi bi-clock"></i> Working Hours
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="start_time" class="form-label">Start Time</label>
+                                <input type="time" class="form-control" id="start_time" name="start_time" 
+                                       value="{{ settings.working_hours.start_time }}" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="end_time" class="form-label">End Time</label>
+                                <input type="time" class="form-control" id="end_time" name="end_time" 
+                                       value="{{ settings.working_hours.end_time }}" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="lunch_break_duration" class="form-label">Lunch Break (minutes)</label>
+                                <input type="number" class="form-control" id="lunch_break_duration" name="lunch_break_duration" 
+                                       value="{{ settings.working_hours.lunch_break_duration }}" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leave Policies Section -->
+                    <div class="mb-4">
+                        <h5 class="text-primary border-bottom pb-2">
+                            <i class="bi bi-calendar-check"></i> Leave Policies
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="annual_leave_quota" class="form-label">Annual Leave Quota (days)</label>
+                                <input type="number" class="form-control" id="annual_leave_quota" name="annual_leave_quota" 
+                                       value="{{ settings.leave_policies.annual_leave_quota }}" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="sick_leave_quota" class="form-label">Sick Leave Quota (days)</label>
+                                <input type="number" class="form-control" id="sick_leave_quota" name="sick_leave_quota" 
+                                       value="{{ settings.leave_policies.sick_leave_quota }}" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="casual_leave_quota" class="form-label">Casual Leave Quota (days)</label>
+                                <input type="number" class="form-control" id="casual_leave_quota" name="casual_leave_quota" 
+                                       value="{{ settings.leave_policies.casual_leave_quota }}" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="checkbox" id="carry_forward_allowed" name="carry_forward_allowed" 
+                                           {% if settings.leave_policies.carry_forward_allowed %}checked{% endif %}>
+                                    <label class="form-check-label" for="carry_forward_allowed">
+                                        Allow Leave Carry Forward
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="max_carry_forward_days" class="form-label">Max Carry Forward Days</label>
+                                <input type="number" class="form-control" id="max_carry_forward_days" name="max_carry_forward_days" 
+                                       value="{{ settings.leave_policies.max_carry_forward_days }}" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payroll Settings Section -->
+                    <div class="mb-4">
+                        <h5 class="text-primary border-bottom pb-2">
+                            <i class="bi bi-cash-coin"></i> Payroll Settings
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="currency" class="form-label">Currency</label>
+                                <select class="form-select" id="currency" name="currency" required>
+                                    <option value="PKR" {% if settings.payroll_settings.currency == 'PKR' %}selected{% endif %}>PKR (Pakistani Rupee)</option>
+                                    <option value="USD" {% if settings.payroll_settings.currency == 'USD' %}selected{% endif %}>USD (US Dollar)</option>
+                                    <option value="EUR" {% if settings.payroll_settings.currency == 'EUR' %}selected{% endif %}>EUR (Euro)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="pay_day" class="form-label">Pay Day (day of month)</label>
+                                <input type="number" class="form-control" id="pay_day" name="pay_day" 
+                                       value="{{ settings.payroll_settings.pay_day }}" min="1" max="31" required>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="tax_rate" class="form-label">Tax Rate (decimal)</label>
+                                <input type="number" step="0.01" class="form-control" id="tax_rate" name="tax_rate" 
+                                       value="{{ settings.payroll_settings.tax_rate }}" required>
+                                <small class="text-muted">e.g., 0.05 for 5%</small>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="provident_fund_rate" class="form-label">Provident Fund Rate</label>
+                                <input type="number" step="0.01" class="form-control" id="provident_fund_rate" name="provident_fund_rate" 
+                                       value="{{ settings.payroll_settings.provident_fund_rate }}" required>
+                                <small class="text-muted">e.g., 0.08 for 8%</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Back to Home
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-save"></i> Save Settings
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}Apply for {{ job.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3><i class="bi bi-paper-plane"></i> Apply for {{ job.title }}</h3>
+                    <p class="mb-0">{{ job.department }} • {{ job.location }}</p>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="first_name" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="first_name" name="first_name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="last_name" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="last_name" name="last_name" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="contact" class="form-label">Contact Number *</label>
+                                    <input type="tel" class="form-control" id="contact" name="contact" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cnic" class="form-label">CNIC *</label>
+                            <input type="text" class="form-control" id="cnic" name="cnic" 
+                                   placeholder="xxxxx-xxxxxxx-x" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="experience_years" class="form-label">Years of Experience</label>
+                                    <input type="number" class="form-control" id="experience_years" name="experience_years" 
+                                           min="0" value="0">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="current_company" class="form-label">Current Company</label>
+                                    <input type="text" class="form-control" id="current_company" name="current_company">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="expected_salary" class="form-label">Expected Salary (PKR)</label>
+                            <input type="number" class="form-control" id="expected_salary" name="expected_salary" 
+                                   min="0" step="1000">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="resume" class="form-label">Resume/CV *</label>
+                            <input type="file" class="form-control" id="resume" name="resume" 
+                                   accept=".pdf,.doc,.docx" required>
+                            <div class="form-text">Accepted formats: PDF, DOC, DOCX (Max 16MB)</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cover_letter" class="form-label">Cover Letter</label>
+                            <textarea class="form-control" id="cover_letter" name="cover_letter" rows="5" 
+                                      placeholder="Tell us why you're interested in this position..."></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ url_for('job_view', job_id=job.job_id) }}" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Back to Job Details
+                            </a>
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="bi bi-send"></i> Submit Application
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Job Summary Card -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5><i class="bi bi-info-circle"></i> Job Summary</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong>Position:</strong> {{ job.title }}<br>
+                            <strong>Department:</strong> {{ job.department }}<br>
+                            <strong>Location:</strong> {{ job.location }}
+                        </div>
+                        <div class="col-md-6">
+                            <strong>Type:</strong> {{ job.employment_type }}<br>
+                            <strong>Level:</strong> {{ job.experience_level }}<br>
+                            {% if job.salary_range %}
+                            <strong>Salary:</strong> {{ job.salary_range }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if job.application_deadline %}
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            <i class="bi bi-clock"></i> Application deadline: {{ job.application_deadline }}
+                        </small>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

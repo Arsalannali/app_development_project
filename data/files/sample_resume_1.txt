@@ -1,0 +1,23 @@
+Sample Resume - Ahmed Ali
+Software Developer
+
+Contact Information:
+Email: ahmed.ali@email.com
+Phone: 0300-1234567
+CNIC: 42101-1234567-8
+
+Experience:
+- 3 years of experience in web development
+- Current company: Tech Solutions Ltd
+- Proficient in Python, Flask, HTML, CSS, JavaScript
+
+Education:
+Bachelor's degree in Computer Science
+
+Skills:
+- Python/Flask
+- HTML/CSS/JavaScript
+- Database Management
+- Version Control (Git)
+
+Expected Salary: 75,000 PKR

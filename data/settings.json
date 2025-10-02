@@ -1,0 +1,38 @@
+{
+  "company_info": {
+    "company_name": "Bareera International",
+    "company_email": "hr@bareera.com",
+    "company_phone": "+92-300-1234567",
+    "company_address": "Karachi, Pakistan"
+  },
+  "working_hours": {
+    "start_time": "09:00",
+    "end_time": "18:00",
+    "working_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "lunch_break_duration": 60
+  },
+  "leave_policies": {
+    "annual_leave_quota": 15,
+    "sick_leave_quota": 10,
+    "casual_leave_quota": 5,
+    "carry_forward_allowed": true,
+    "max_carry_forward_days": 5
+  },
+  "payroll_settings": {
+    "currency": "PKR",
+    "pay_day": 25,
+    "tax_rate": 0.05,
+    "provident_fund_rate": 0.08
+  },
+  "security_settings": {
+    "session_timeout_minutes": 60,
+    "password_reset_enabled": true,
+    "min_password_length": 6
+  }
+}

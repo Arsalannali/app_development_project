@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}Onboard {{ applicant.first_name }} {{ applicant.last_name }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h3><i class="bi bi-user-plus"></i> Onboard New Employee</h3>
+                    <p class="mb-0">{{ applicant.first_name }} {{ applicant.last_name }} - {{ job.title }}</p>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> 
+                        <strong>Onboarding Process:</strong> This will create a new employee record using the applicant's information. 
+                        Please review and complete the employee details below.
+                    </div>
+
+                    <form method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="first_name" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="first_name" name="first_name" 
+                                           value="{{ applicant.first_name }}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="last_name" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="last_name" name="last_name" 
+                                           value="{{ applicant.last_name }}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="cnic" class="form-label">CNIC *</label>
+                                    <input type="text" class="form-control" id="cnic" name="cnic" 
+                                           value="{{ applicant.cnic }}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="contact" class="form-label">Contact Number *</label>
+                                    <input type="text" class="form-control" id="contact" name="contact" 
+                                           value="{{ applicant.contact }}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" 
+                                           value="{{ applicant.email }}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="department" class="form-label">Department *</label>
+                                    <select class="form-select" id="department" name="department" required>
+                                        <option value="">Select Department</option>
+                                        {% for dept in departments %}
+                                        <option value="{{ dept }}" 
+                                                {{ 'selected' if dept == job.department else '' }}>
+                                            {{ dept }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="designation" class="form-label">Designation/Position *</label>
+                                    <input type="text" class="form-control" id="designation" name="designation" 
+                                           value="{{ job.title }}" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="join_date" class="form-label">Join Date *</label>
+                                    <input type="date" class="form-control" id="join_date" name="join_date" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="salary" class="form-label">Salary (PKR) *</label>
+                                    <input type="number" class="form-control" id="salary" name="salary" 
+                                           value="{{ applicant.expected_salary or '' }}" min="0" step="1000" required>
+                                    <div class="form-text">Expected salary: PKR {{ "{:,.0f}".format(applicant.expected_salary) if applicant.expected_salary else 'Not specified' }}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-warning">
+                            <i class="bi bi-exclamation-triangle"></i>
+                            <strong>Important:</strong> Once you onboard this applicant, they will become an active employee in the system. 
+                            Make sure all information is correct before proceeding.
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ url_for('applicant_view', applicant_id=applicant.applicant_id) }}" 
+                               class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Back to Applicant
+                            </a>
+                            <button type="submit" class="btn btn-success btn-lg" 
+                                    onclick="return confirm('Are you sure you want to onboard this applicant as an employee?')">
+                                <i class="bi bi-person-plus"></i> Onboard Employee
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Applicant Summary -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5><i class="bi bi-user"></i> Applicant Summary</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong>Name:</strong> {{ applicant.first_name }} {{ applicant.last_name }}<br>
+                            <strong>Email:</strong> {{ applicant.email }}<br>
+                            <strong>Contact:</strong> {{ applicant.contact }}<br>
+                            <strong>CNIC:</strong> {{ applicant.cnic }}
+                        </div>
+                        <div class="col-md-6">
+                            <strong>Experience:</strong> {{ applicant.experience_years }} years<br>
+                            <strong>Current Company:</strong> {{ applicant.current_company or 'Not specified' }}<br>
+                            <strong>Applied Date:</strong> {{ applicant.application_date }}<br>
+                            <strong>Status:</strong> 
+                            {% if applicant.status == 'Shortlisted' %}
+                                <span class="badge bg-info">{{ applicant.status }}</span>
+                            {% elif applicant.status == 'Interviewed' %}
+                                <span class="badge bg-warning">{{ applicant.status }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Details -->
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h5><i class="bi bi-briefcase"></i> Job Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong>Position:</strong> {{ job.title }}<br>
+                            <strong>Department:</strong> {{ job.department }}<br>
+                            <strong>Location:</strong> {{ job.location }}
+                        </div>
+                        <div class="col-md-6">
+                            <strong>Type:</strong> {{ job.employment_type }}<br>
+                            <strong>Level:</strong> {{ job.experience_level }}<br>
+                            {% if job.salary_range %}
+                            <strong>Salary Range:</strong> {{ job.salary_range }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

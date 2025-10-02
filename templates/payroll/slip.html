@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block title %}Salary Slip - Bareera Intl. HR Module{% endblock %}
+
+{% block extra_css %}
+<style>
+    @media print {
+        .no-print {
+            display: none !important;
+        }
+        .salary-slip {
+            box-shadow: none !important;
+            border: 1px solid #000 !important;
+        }
+    }
+    .salary-slip {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4 no-print">
+            <h2><i class="bi bi-file-earmark-text"></i> Salary Slip</h2>
+            <div>
+                <button onclick="window.print()" class="btn btn-primary">
+                    <i class="bi bi-printer"></i> Print Slip
+                </button>
+                <a href="{{ url_for('payroll_list') }}" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+            </div>
+        </div>
+
+        <div class="card shadow-sm salary-slip">
+            <div class="card-body p-5">
+                <!-- Company Header -->
+                <div class="text-center mb-4">
+                    <h3><i class="bi bi-building"></i> Bareera International</h3>
+                    <p class="text-muted mb-0">Management Information System - HR Module</p>
+                    <hr class="my-3">
+                    <h5>SALARY SLIP</h5>
+                </div>
+
+                <!-- Employee and Period Info -->
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <h6 class="text-muted">EMPLOYEE INFORMATION</h6>
+                        <table class="table table-sm table-borderless">
+                            <tr>
+                                <td><strong>Employee ID:</strong></td>
+                                <td>{{ employee.employee_id }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Name:</strong></td>
+                                <td>{{ employee.first_name }} {{ employee.last_name }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Designation:</strong></td>
+                                <td>{{ employee.designation }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Department:</strong></td>
+                                <td>{{ employee.department }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-6">
+                        <h6 class="text-muted">PAYMENT INFORMATION</h6>
+                        <table class="table table-sm table-borderless">
+                            <tr>
+                                <td><strong>Pay Period:</strong></td>
+                                <td>{{ payroll.month }} {{ payroll.year }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Payment Date:</strong></td>
+                                <td>{{ payroll.payment_date }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Status:</strong></td>
+                                <td>
+                                    {% if payroll.status == 'Paid' %}
+                                        <span class="badge bg-success">{{ payroll.status }}</span>
+                                    {% else %}
+                                        <span class="badge bg-warning">{{ payroll.status }}</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Payroll ID:</strong></td>
+                                <td>{{ payroll.payroll_id }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Salary Breakdown -->
+                <h6 class="text-muted mb-3">SALARY BREAKDOWN</h6>
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Description</th>
+                            <th class="text-end">Amount (PKR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Basic Salary</strong></td>
+                            <td class="text-end">{{ "{:,.2f}".format(payroll.basic_salary) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Allowances</td>
+                            <td class="text-end text-success">+ {{ "{:,.2f}".format(payroll.allowances) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Deductions</td>
+                            <td class="text-end text-danger">- {{ "{:,.2f}".format(payroll.deductions) }}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="table-primary">
+                        <tr>
+                            <th>NET SALARY</th>
+                            <th class="text-end">PKR {{ "{:,.2f}".format(payroll.net_salary) }}</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <!-- Footer -->
+                <div class="mt-5 pt-4 border-top">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Generated By:</strong> User ID {{ payroll.generated_by }}</p>
+                            <p class="mb-1"><strong>Generated Date:</strong> {{ payroll.generated_date }}</p>
+                        </div>
+                        <div class="col-6 text-end">
+                            <p class="mb-1">_____________________</p>
+                            <p class="mb-0 text-muted">Authorized Signature</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 text-muted">
+                    <small>This is a computer-generated document. No signature is required.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

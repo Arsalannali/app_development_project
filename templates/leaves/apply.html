@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}Apply for Leave - Bareera Intl. HR Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="mb-0"><i class="bi bi-calendar-plus"></i> Apply for Leave</h1>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="employee_id" class="form-label">Select Employee</label>
+                        <select class="form-select" id="employee_id" name="employee_id" required>
+                            <option value="">Choose an employee...</option>
+                            {% for employee in employees %}
+                            <option value="{{ employee.employee_id }}">
+                                {{ employee.first_name }} {{ employee.last_name }} 
+                                ({{ employee.department }} - {{ employee.designation }})
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="leave_type" class="form-label">Leave Type</label>
+                        <select class="form-select" id="leave_type" name="leave_type" required>
+                            <option value="">Select leave type...</option>
+                            <option value="Annual Leave">Annual Leave</option>
+                            <option value="Sick Leave">Sick Leave</option>
+                            <option value="Personal Leave">Personal Leave</option>
+                            <option value="Maternity Leave">Maternity Leave</option>
+                            <option value="Paternity Leave">Paternity Leave</option>
+                            <option value="Emergency Leave">Emergency Leave</option>
+                            <option value="Unpaid Leave">Unpaid Leave</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="start_date" class="form-label">Start Date</label>
+                                <input type="date" class="form-control" id="start_date" name="start_date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="end_date" class="form-label">End Date</label>
+                                <input type="date" class="form-control" id="end_date" name="end_date" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="reason" class="form-label">Reason for Leave</label>
+                        <textarea class="form-control" id="reason" name="reason" rows="4" 
+                                  placeholder="Please provide a detailed reason for your leave request..." required></textarea>
+                        <div class="form-text">Be specific about why you need this leave. This information will help in the approval process.</div>
+                    </div>
+
+                    <!-- Duration Display -->
+                    <div class="mb-3">
+                        <div class="alert alert-info">
+                            <strong>Leave Duration:</strong> <span id="duration-display">Select dates to see duration</span>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ url_for('leaves_list') }}" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Back to Leave Requests
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-send"></i> Submit Leave Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Leave Policy Information -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-info-circle"></i> Leave Policy Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Leave Types:</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Annual Leave:</strong> Paid vacation time</li>
+                            <li><strong>Sick Leave:</strong> For illness or medical appointments</li>
+                            <li><strong>Personal Leave:</strong> For personal matters</li>
+                            <li><strong>Maternity/Paternity Leave:</strong> For new parents</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Important Notes:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-exclamation-triangle text-warning"></i> Submit requests at least 48 hours in advance</li>
+                            <li><i class="bi bi-clock text-info"></i> Emergency leaves can be applied immediately</li>
+                            <li><i class="bi bi-person-check text-success"></i> All requests require approval from HR/Admin</li>
+                            <li><i class="bi bi-calendar-check text-primary"></i> Approved leaves will be reflected in attendance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+    // Calculate and display leave duration
+    function calculateDuration() {
+        const startDate = document.getElementById('start_date').value;
+        const endDate = document.getElementById('end_date').value;
+        
+        if (startDate && endDate) {
+            const start = new Date(startDate);
+            const end = new Date(endDate);
+            
+            if (end >= start) {
+                const diffTime = Math.abs(end - start);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
+                document.getElementById('duration-display').textContent = diffDays + ' day' + (diffDays > 1 ? 's' : '');
+            } else {
+                document.getElementById('duration-display').textContent = 'End date must be after start date';
+            }
+        } else {
+            document.getElementById('duration-display').textContent = 'Select dates to see duration';
+        }
+    }
+    
+    // Add event listeners
+    document.getElementById('start_date').addEventListener('change', calculateDuration);
+    document.getElementById('end_date').addEventListener('change', calculateDuration);
+    
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('start_date').setAttribute('min', today);
+    document.getElementById('end_date').setAttribute('min', today);
+</script>
+{% endblock %}
+{% endblock %}

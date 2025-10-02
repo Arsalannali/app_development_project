@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Mark Attendance - Bareera Intl. HR Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="mb-0"><i class="bi bi-calendar-check"></i> Mark Attendance</h1>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="employee_id" class="form-label">Select Employee</label>
+                        <select class="form-select" id="employee_id" name="employee_id" required>
+                            <option value="">Choose an employee...</option>
+                            {% for employee in employees %}
+                            <option value="{{ employee.employee_id }}">
+                                {{ employee.first_name }} {{ employee.last_name }} 
+                                ({{ employee.department }} - {{ employee.designation }})
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Action</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="action" id="check_in" value="check_in" required>
+                                    <label class="form-check-label" for="check_in">
+                                        <i class="bi bi-arrow-right-circle text-success"></i> Check In
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="action" id="check_out" value="check_out" required>
+                                    <label class="form-check-label" for="check_out">
+                                        <i class="bi bi-arrow-left-circle text-primary"></i> Check Out
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notes (Optional)</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3" 
+                                  placeholder="Add any notes about attendance..."></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ url_for('attendance_list') }}" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Back to List
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-circle"></i> Mark Attendance
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Today's Info Card -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-info-circle"></i> Today's Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>Date:</strong> <span id="current-date"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Current Time:</strong> <span id="current-time"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+    // Update current time and date
+    function updateDateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        const dateString = now.toLocaleDateString();
+        document.getElementById('current-time').textContent = timeString;
+        document.getElementById('current-date').textContent = dateString;
+    }
+    
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+{% endblock %}
+{% endblock %}

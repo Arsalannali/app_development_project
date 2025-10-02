@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}{% if employee %}Edit{% else %}Add{% endif %} Employee - Bareera Intl. HR Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">
+                    <i class="bi bi-person-plus"></i> 
+                    {% if employee %}Edit Employee{% else %}Add New Employee{% endif %}
+                </h3>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="first_name" class="form-label">First Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="first_name" name="first_name" 
+                                   value="{{ employee.first_name if employee else '' }}" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="last_name" class="form-label">Last Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="last_name" name="last_name" 
+                                   value="{{ employee.last_name if employee else '' }}" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cnic" class="form-label">CNIC <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="cnic" name="cnic" 
+                                   placeholder="xxxxx-xxxxxxx-x" 
+                                   value="{{ employee.cnic if employee else '' }}" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="contact" class="form-label">Contact <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="contact" name="contact" 
+                                   placeholder="03xx-xxxxxxx" 
+                                   value="{{ employee.contact if employee else '' }}" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               value="{{ employee.email if employee else '' }}" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="department" class="form-label">Department <span class="text-danger">*</span></label>
+                            <select class="form-select" id="department" name="department" required>
+                                <option value="">Select Department</option>
+                                {% for dept in departments %}
+                                <option value="{{ dept }}" {% if employee and employee.department == dept %}selected{% endif %}>
+                                    {{ dept }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="designation" class="form-label">Designation <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="designation" name="designation" 
+                                   value="{{ employee.designation if employee else '' }}" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="join_date" class="form-label">Join Date <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" id="join_date" name="join_date" 
+                                   value="{{ employee.join_date if employee else '' }}" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="salary" class="form-label">Salary (PKR) <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="salary" name="salary" 
+                                   min="0" step="1000" 
+                                   value="{{ employee.salary if employee else '' }}" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
+                        <select class="form-select" id="status" name="status" required>
+                            <option value="Active" {% if not employee or employee.status == 'Active' %}selected{% endif %}>Active</option>
+                            <option value="On Leave" {% if employee and employee.status == 'On Leave' %}selected{% endif %}>On Leave</option>
+                            <option value="Suspended" {% if employee and employee.status == 'Suspended' %}selected{% endif %}>Suspended</option>
+                            <option value="Terminated" {% if employee and employee.status == 'Terminated' %}selected{% endif %}>Terminated</option>
+                        </select>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('employees_list') }}" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-save"></i> 
+                            {% if employee %}Update Employee{% else %}Add Employee{% endif %}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

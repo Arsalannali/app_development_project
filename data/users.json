@@ -1,0 +1,218 @@
+[
+  {
+    "user_id": 1,
+    "username": "admin",
+    "password_hash": "$2b$12$bt1rR67Fa8In.XfCyClejOd3nf/jNWKDVAIPEKGxeMLncMGwP8v62",
+    "role": "Admin",
+    "employee_id": null,
+    "active": true
+  },
+  {
+    "user_id": 2,
+    "username": "hr_staff",
+    "password_hash": "$2b$12$bt1rR67Fa8In.XfCyClejOd3nf/jNWKDVAIPEKGxeMLncMGwP8v62",
+    "role": "HR Staff",
+    "employee_id": null,
+    "active": true
+  },
+  {
+    "user_id": 3,
+    "username": "emp1",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 1,
+    "active": true
+  },
+  {
+    "user_id": 4,
+    "username": "emp2",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 2,
+    "active": false
+  },
+  {
+    "user_id": 5,
+    "username": "emp3",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 3,
+    "active": true
+  },
+  {
+    "user_id": 6,
+    "username": "emp4",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 4,
+    "active": true
+  },
+  {
+    "user_id": 7,
+    "username": "emp5",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 5,
+    "active": true
+  },
+  {
+    "user_id": 8,
+    "username": "emp6",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 6,
+    "active": true
+  },
+  {
+    "user_id": 9,
+    "username": "emp7",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 7,
+    "active": true
+  },
+  {
+    "user_id": 10,
+    "username": "emp8",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 8,
+    "active": true
+  },
+  {
+    "user_id": 11,
+    "username": "emp9",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 9,
+    "active": true
+  },
+  {
+    "user_id": 12,
+    "username": "emp10",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 10,
+    "active": true
+  },
+  {
+    "user_id": 13,
+    "username": "emp11",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 11,
+    "active": false
+  },
+  {
+    "user_id": 14,
+    "username": "emp12",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 12,
+    "active": true
+  },
+  {
+    "user_id": 15,
+    "username": "emp13",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 13,
+    "active": true
+  },
+  {
+    "user_id": 16,
+    "username": "emp14",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 14,
+    "active": true
+  },
+  {
+    "user_id": 17,
+    "username": "emp15",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 15,
+    "active": true
+  },
+  {
+    "user_id": 18,
+    "username": "emp16",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 16,
+    "active": true
+  },
+  {
+    "user_id": 19,
+    "username": "emp17",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 17,
+    "active": true
+  },
+  {
+    "user_id": 20,
+    "username": "emp18",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 18,
+    "active": true
+  },
+  {
+    "user_id": 21,
+    "username": "emp19",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 19,
+    "active": false
+  },
+  {
+    "user_id": 22,
+    "username": "emp20",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 20,
+    "active": true
+  },
+  {
+    "user_id": 23,
+    "username": "emp21",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 21,
+    "active": true
+  },
+  {
+    "user_id": 24,
+    "username": "emp22",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 22,
+    "active": true
+  },
+  {
+    "user_id": 25,
+    "username": "emp23",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 23,
+    "active": true
+  },
+  {
+    "user_id": 26,
+    "username": "emp24",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 24,
+    "active": true
+  },
+  {
+    "user_id": 27,
+    "username": "emp25",
+    "password_hash": "$2b$12$/fVXTYsjyijKUKOMs5/ot.6f2mlnXk6g3MTGgu8NPI.TFBlCnueru",
+    "role": "Employee",
+    "employee_id": 25,
+    "active": true
+  }
+]

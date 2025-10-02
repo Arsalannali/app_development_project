@@ -1,0 +1,43 @@
+[
+  {
+    "applicant_id": 1,
+    "job_id": 1,
+    "first_name": "Ahmed",
+    "last_name": "Ali",
+    "email": "ahmed.ali@email.com",
+    "contact": "0300-1234567",
+    "cnic": "42101-1234567-8",
+    "experience_years": 3,
+    "current_company": "Tech Solutions Ltd",
+    "expected_salary": 75000,
+    "cover_letter": "I am very interested in this position and believe my experience in web development makes me a suitable candidate.",
+    "resume_filename": "20250115_120000_sample_resume_1.txt",
+    "application_date": "2025-01-20",
+    "status": "Applied",
+    "reviewed_by": null,
+    "review_date": null,
+    "interview_date": null,
+    "notes": null
+  },
+  {
+    "applicant_id": 2,
+    "job_id": 2,
+    "first_name": "Fatima",
+    "last_name": "Khan",
+    "email": "fatima.khan@email.com",
+    "contact": "0301-9876543",
+    "cnic": "42101-9876543-2",
+    "experience_years": 1,
+    "current_company": "ABC Corp",
+    "expected_salary": 50000,
+    "cover_letter": "I am a recent graduate with HR internship experience and am eager to start my career in HR.",
+    "resume_filename": "20250115_120000_sample_resume_2.txt",
+    "application_date": "2025-01-18",
+    "status": "Shortlisted",
+    "reviewed_by": 1,
+    "review_date": "2025-01-22",
+    "interview_date": "2025-01-25",
+    "notes": "Strong communication skills, relevant internship experience"
+  }
+]
+

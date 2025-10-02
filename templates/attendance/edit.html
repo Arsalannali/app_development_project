@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Attendance Record - Bareera Intl. HR Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="mb-0"><i class="bi bi-pencil-square"></i> Edit Attendance Record</h1>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="employee_id" class="form-label">Employee</label>
+                        <select class="form-select" id="employee_id" name="employee_id" disabled>
+                            {% for employee in employees %}
+                            <option value="{{ employee.employee_id }}" 
+                                    {% if attendance.employee_id == employee.employee_id %}selected{% endif %}>
+                                {{ employee.first_name }} {{ employee.last_name }} 
+                                ({{ employee.department }} - {{ employee.designation }})
+                            </option>
+                            {% endfor %}
+                        </select>
+                        <input type="hidden" name="employee_id" value="{{ attendance.employee_id }}">
+                        <div class="form-text">Employee cannot be changed for existing attendance records.</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="date" name="date" 
+                                       value="{{ attendance.date }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="check_in_time" class="form-label">Check In Time</label>
+                                <input type="time" class="form-control" id="check_in_time" name="check_in_time" 
+                                       value="{{ attendance.check_in_time or '' }}">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="check_out_time" class="form-label">Check Out Time</label>
+                                <input type="time" class="form-control" id="check_out_time" name="check_out_time" 
+                                       value="{{ attendance.check_out_time or '' }}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status</label>
+                        <select class="form-select" id="status" name="status" required>
+                            <option value="Present" {% if attendance.status == 'Present' %}selected{% endif %}>Present</option>
+                            <option value="Absent" {% if attendance.status == 'Absent' %}selected{% endif %}>Absent</option>
+                            <option value="Late" {% if attendance.status == 'Late' %}selected{% endif %}>Late</option>
+                            <option value="Half Day" {% if attendance.status == 'Half Day' %}selected{% endif %}>Half Day</option>
+                            <option value="Overtime" {% if attendance.status == 'Overtime' %}selected{% endif %}>Overtime</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notes</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3" 
+                                  placeholder="Add any notes about this attendance record...">{{ attendance.notes or '' }}</textarea>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ url_for('attendance_list') }}" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Back to Attendance
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-circle"></i> Update Attendance
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Record Information -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-info-circle"></i> Record Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>Attendance ID:</strong> {{ attendance.attendance_id }}
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Employee ID:</strong> {{ attendance.employee_id }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+    // Auto-calculate duration when times are entered
+    function calculateDuration() {
+        const checkIn = document.getElementById('check_in_time').value;
+        const checkOut = document.getElementById('check_out_time').value;
+        
+        if (checkIn && checkOut) {
+            const [inHour, inMin] = checkIn.split(':').map(Number);
+            const [outHour, outMin] = checkOut.split(':').map(Number);
+            
+            const inMinutes = inHour * 60 + inMin;
+            const outMinutes = outHour * 60 + outMin;
+            
+            if (outMinutes > inMinutes) {
+                const durationMinutes = outMinutes - inMinutes;
+                const hours = Math.floor(durationMinutes / 60);
+                const minutes = durationMinutes % 60;
+                
+                // Show duration info
+                const durationInfo = document.getElementById('duration-info') || document.createElement('div');
+                durationInfo.id = 'duration-info';
+                durationInfo.className = 'alert alert-info mt-2';
+                durationInfo.innerHTML = `<strong>Working Duration:</strong> ${hours} hours ${minutes} minutes`;
+                
+                const statusDiv = document.getElementById('status').parentNode;
+                if (!document.getElementById('duration-info')) {
+                    statusDiv.parentNode.insertBefore(durationInfo, statusDiv.nextSibling);
+                } else {
+                    durationInfo.innerHTML = `<strong>Working Duration:</strong> ${hours} hours ${minutes} minutes`;
+                }
+            }
+        }
+    }
+    
+    // Add event listeners
+    document.getElementById('check_in_time').addEventListener('change', calculateDuration);
+    document.getElementById('check_out_time').addEventListener('change', calculateDuration);
+</script>
+{% endblock %}
+{% endblock %}

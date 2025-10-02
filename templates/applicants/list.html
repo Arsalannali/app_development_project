@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Applicants{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2><i class="bi bi-users"></i> Job Applicants</h2>
+                    {% if current_job %}
+                    <p class="text-muted mb-0">Filtered by: <strong>{{ current_job.title }}</strong> (Job ID: {{ current_job.job_id }})</p>
+                    {% endif %}
+                </div>
+                <div class="btn-group">
+                    {% if current_job %}
+                    <a href="{{ url_for('applicants_list') }}" class="btn btn-outline-secondary">
+                        <i class="bi bi-x-circle"></i> Clear Filter
+                    </a>
+                    <a href="{{ url_for('job_view', job_id=current_job.job_id) }}" class="btn btn-outline-info">
+                        <i class="bi bi-eye"></i> View Job
+                    </a>
+                    {% endif %}
+                    <a href="{{ url_for('jobs_list') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-briefcase"></i> View Jobs
+                    </a>
+                </div>
+            </div>
+
+            {% if applicants %}
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    {% if not current_job %}
+                                    <th>Job Applied For</th>
+                                    {% endif %}
+                                    <th>Contact</th>
+                                    <th>Experience</th>
+                                    <th>Expected Salary</th>
+                                    <th>Applied Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for applicant in applicants %}
+                                <tr>
+                                    <td>{{ applicant.applicant_id }}</td>
+                                    <td>
+                                        <strong>{{ applicant.first_name }} {{ applicant.last_name }}</strong>
+                                        <br>
+                                        <small class="text-muted">{{ applicant.email }}</small>
+                                    </td>
+                                    {% if not current_job %}
+                                    <td>
+                                        <strong>{{ applicant.job_title }}</strong>
+                                        <br>
+                                        <small class="text-muted">Job ID: {{ applicant.job_id }}</small>
+                                    </td>
+                                    {% endif %}
+                                    <td>
+                                        {{ applicant.contact }}
+                                        <br>
+                                        <small class="text-muted">{{ applicant.cnic }}</small>
+                                    </td>
+                                    <td>
+                                        {{ applicant.experience_years }} years
+                                        {% if applicant.current_company %}
+                                        <br>
+                                        <small class="text-muted">@ {{ applicant.current_company }}</small>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if applicant.expected_salary %}
+                                            PKR {{ "{:,.0f}".format(applicant.expected_salary) }}
+                                        {% else %}
+                                            <span class="text-muted">Not specified</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ applicant.application_date }}</td>
+                                    <td>
+                                        {% if applicant.status == 'Applied' %}
+                                            <span class="badge bg-primary">{{ applicant.status }}</span>
+                                        {% elif applicant.status == 'Shortlisted' %}
+                                            <span class="badge bg-info">{{ applicant.status }}</span>
+                                        {% elif applicant.status == 'Interviewed' %}
+                                            <span class="badge bg-warning">{{ applicant.status }}</span>
+                                        {% elif applicant.status == 'Hired' %}
+                                            <span class="badge bg-success">{{ applicant.status }}</span>
+                                        {% elif applicant.status == 'Rejected' %}
+                                            <span class="badge bg-danger">{{ applicant.status }}</span>
+                                        {% else %}
+                                            <span class="badge bg-secondary">{{ applicant.status }}</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            <a href="{{ url_for('applicant_view', applicant_id=applicant.applicant_id) }}" 
+                                               class="btn btn-sm btn-outline-primary" title="View Details">
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            {% if applicant.resume_filename %}
+                                            <a href="{{ url_for('download_resume', filename=applicant.resume_filename) }}" 
+                                               class="btn btn-sm btn-outline-info" title="Download Resume">
+                                                <i class="bi bi-download"></i>
+                                            </a>
+                                            {% endif %}
+                                            {% if applicant.status in ['Applied', 'Shortlisted', 'Interviewed'] and session.role == 'Admin' %}
+                                            <form method="POST" action="{{ url_for('applicant_delete', applicant_id=applicant.applicant_id) }}" 
+                                                  class="d-inline" onsubmit="return confirm('Are you sure you want to delete this applicant?')">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </form>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle"></i> No applicants found.
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

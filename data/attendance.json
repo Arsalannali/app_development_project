@@ -1,0 +1,2009 @@
+[
+  {
+    "attendance_id": 1,
+    "employee_id": 1,
+    "date": "2025-01-15",
+    "check_in_time": "09:00:00",
+    "check_out_time": "17:30:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 2,
+    "employee_id": 1,
+    "date": "2025-01-16",
+    "check_in_time": "09:15:00",
+    "check_out_time": "18:00:00",
+    "notes": "Late arrival due to traffic",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 4,
+    "employee_id": 1,
+    "date": "2025-10-02",
+    "check_in_time": "01:36:33",
+    "check_out_time": "01:36:53",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 5,
+    "employee_id": 1,
+    "date": "2025-10-03",
+    "check_in_time": "01:07:08",
+    "check_out_time": null,
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 6,
+    "employee_id": 1,
+    "date": "2025-09-24",
+    "check_in_time": "09:56:00",
+    "check_out_time": "19:19:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 7,
+    "employee_id": 2,
+    "date": "2025-09-24",
+    "check_in_time": "09:56:00",
+    "check_out_time": "18:35:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 8,
+    "employee_id": 3,
+    "date": "2025-09-24",
+    "check_in_time": "09:01:00",
+    "check_out_time": "18:07:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 9,
+    "employee_id": 4,
+    "date": "2025-09-24",
+    "check_in_time": "08:23:00",
+    "check_out_time": "20:01:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 10,
+    "employee_id": 5,
+    "date": "2025-09-24",
+    "check_in_time": "10:05:00",
+    "check_out_time": "19:06:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 11,
+    "employee_id": 6,
+    "date": "2025-09-24",
+    "check_in_time": "08:43:00",
+    "check_out_time": "20:54:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 12,
+    "employee_id": 7,
+    "date": "2025-09-24",
+    "check_in_time": "10:00:00",
+    "check_out_time": "17:41:00",
+    "notes": "Team meeting",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 13,
+    "employee_id": 8,
+    "date": "2025-09-24",
+    "check_in_time": "10:57:00",
+    "check_out_time": "20:39:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 14,
+    "employee_id": 9,
+    "date": "2025-09-24",
+    "check_in_time": "10:24:00",
+    "check_out_time": "20:17:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 15,
+    "employee_id": 10,
+    "date": "2025-09-24",
+    "check_in_time": "09:13:00",
+    "check_out_time": "20:26:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 16,
+    "employee_id": 11,
+    "date": "2025-09-24",
+    "check_in_time": "08:03:00",
+    "check_out_time": "19:56:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 17,
+    "employee_id": 12,
+    "date": "2025-09-24",
+    "check_in_time": "08:16:00",
+    "check_out_time": "20:33:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 18,
+    "employee_id": 13,
+    "date": "2025-09-24",
+    "check_in_time": "10:00:00",
+    "check_out_time": "19:55:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 19,
+    "employee_id": 14,
+    "date": "2025-09-24",
+    "check_in_time": "08:39:00",
+    "check_out_time": "18:57:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 20,
+    "employee_id": 15,
+    "date": "2025-09-24",
+    "check_in_time": "10:07:00",
+    "check_out_time": "17:16:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 21,
+    "employee_id": 16,
+    "date": "2025-09-24",
+    "check_in_time": "08:22:00",
+    "check_out_time": "19:01:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 22,
+    "employee_id": 17,
+    "date": "2025-09-24",
+    "check_in_time": "09:16:00",
+    "check_out_time": "18:14:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 23,
+    "employee_id": 18,
+    "date": "2025-09-24",
+    "check_in_time": "09:14:00",
+    "check_out_time": "18:39:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 24,
+    "employee_id": 19,
+    "date": "2025-09-24",
+    "check_in_time": "09:20:00",
+    "check_out_time": "20:47:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 25,
+    "employee_id": 20,
+    "date": "2025-09-24",
+    "check_in_time": "08:46:00",
+    "check_out_time": "19:33:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 26,
+    "employee_id": 22,
+    "date": "2025-09-24",
+    "check_in_time": "10:06:00",
+    "check_out_time": "19:47:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 27,
+    "employee_id": 23,
+    "date": "2025-09-24",
+    "check_in_time": "09:00:00",
+    "check_out_time": "17:03:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 28,
+    "employee_id": 24,
+    "date": "2025-09-24",
+    "check_in_time": "10:24:00",
+    "check_out_time": "18:06:00",
+    "notes": "Team meeting",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 29,
+    "employee_id": 25,
+    "date": "2025-09-24",
+    "check_in_time": "10:08:00",
+    "check_out_time": "19:46:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 30,
+    "employee_id": 2,
+    "date": "2025-09-25",
+    "check_in_time": "10:05:00",
+    "check_out_time": "20:40:00",
+    "notes": "Team meeting",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 31,
+    "employee_id": 3,
+    "date": "2025-09-25",
+    "check_in_time": "09:35:00",
+    "check_out_time": "20:16:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 32,
+    "employee_id": 4,
+    "date": "2025-09-25",
+    "check_in_time": "08:16:00",
+    "check_out_time": "18:41:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 33,
+    "employee_id": 5,
+    "date": "2025-09-25",
+    "check_in_time": "10:09:00",
+    "check_out_time": "20:13:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 34,
+    "employee_id": 6,
+    "date": "2025-09-25",
+    "check_in_time": "08:10:00",
+    "check_out_time": "17:29:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 35,
+    "employee_id": 8,
+    "date": "2025-09-25",
+    "check_in_time": "08:52:00",
+    "check_out_time": "19:59:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 36,
+    "employee_id": 9,
+    "date": "2025-09-25",
+    "check_in_time": "08:17:00",
+    "check_out_time": "17:41:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 37,
+    "employee_id": 10,
+    "date": "2025-09-25",
+    "check_in_time": "10:18:00",
+    "check_out_time": "18:40:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 38,
+    "employee_id": 11,
+    "date": "2025-09-25",
+    "check_in_time": "08:02:00",
+    "check_out_time": "17:14:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 39,
+    "employee_id": 12,
+    "date": "2025-09-25",
+    "check_in_time": "08:09:00",
+    "check_out_time": "17:44:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 40,
+    "employee_id": 13,
+    "date": "2025-09-25",
+    "check_in_time": "08:48:00",
+    "check_out_time": "19:47:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 41,
+    "employee_id": 14,
+    "date": "2025-09-25",
+    "check_in_time": "09:50:00",
+    "check_out_time": "19:33:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 42,
+    "employee_id": 15,
+    "date": "2025-09-25",
+    "check_in_time": "08:23:00",
+    "check_out_time": "18:46:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 43,
+    "employee_id": 16,
+    "date": "2025-09-25",
+    "check_in_time": "09:12:00",
+    "check_out_time": "18:06:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 44,
+    "employee_id": 17,
+    "date": "2025-09-25",
+    "check_in_time": "09:17:00",
+    "check_out_time": "19:36:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 45,
+    "employee_id": 18,
+    "date": "2025-09-25",
+    "check_in_time": "09:27:00",
+    "check_out_time": "17:10:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 46,
+    "employee_id": 19,
+    "date": "2025-09-25",
+    "check_in_time": "10:23:00",
+    "check_out_time": "20:14:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 47,
+    "employee_id": 20,
+    "date": "2025-09-25",
+    "check_in_time": "09:47:00",
+    "check_out_time": "19:02:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 48,
+    "employee_id": 21,
+    "date": "2025-09-25",
+    "check_in_time": "08:28:00",
+    "check_out_time": "19:37:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 49,
+    "employee_id": 22,
+    "date": "2025-09-25",
+    "check_in_time": "08:59:00",
+    "check_out_time": "17:26:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 50,
+    "employee_id": 23,
+    "date": "2025-09-25",
+    "check_in_time": "08:58:00",
+    "check_out_time": "19:54:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 51,
+    "employee_id": 24,
+    "date": "2025-09-25",
+    "check_in_time": "08:22:00",
+    "check_out_time": "17:15:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 52,
+    "employee_id": 25,
+    "date": "2025-09-25",
+    "check_in_time": "08:59:00",
+    "check_out_time": "19:52:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 53,
+    "employee_id": 1,
+    "date": "2025-09-26",
+    "check_in_time": "10:59:00",
+    "check_out_time": "18:54:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 54,
+    "employee_id": 2,
+    "date": "2025-09-26",
+    "check_in_time": "10:27:00",
+    "check_out_time": "20:00:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 55,
+    "employee_id": 3,
+    "date": "2025-09-26",
+    "check_in_time": "09:42:00",
+    "check_out_time": "17:17:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 56,
+    "employee_id": 4,
+    "date": "2025-09-26",
+    "check_in_time": "08:57:00",
+    "check_out_time": "20:37:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 57,
+    "employee_id": 5,
+    "date": "2025-09-26",
+    "check_in_time": "09:15:00",
+    "check_out_time": "17:35:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 58,
+    "employee_id": 6,
+    "date": "2025-09-26",
+    "check_in_time": "08:25:00",
+    "check_out_time": "20:58:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 59,
+    "employee_id": 7,
+    "date": "2025-09-26",
+    "check_in_time": "08:57:00",
+    "check_out_time": "18:06:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 60,
+    "employee_id": 8,
+    "date": "2025-09-26",
+    "check_in_time": "09:44:00",
+    "check_out_time": "17:59:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 61,
+    "employee_id": 9,
+    "date": "2025-09-26",
+    "check_in_time": "10:02:00",
+    "check_out_time": "18:01:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 62,
+    "employee_id": 10,
+    "date": "2025-09-26",
+    "check_in_time": "08:00:00",
+    "check_out_time": "20:26:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 63,
+    "employee_id": 11,
+    "date": "2025-09-26",
+    "check_in_time": "10:04:00",
+    "check_out_time": "20:25:00",
+    "notes": "Client presentation",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 64,
+    "employee_id": 12,
+    "date": "2025-09-26",
+    "check_in_time": "08:54:00",
+    "check_out_time": "20:01:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 65,
+    "employee_id": 13,
+    "date": "2025-09-26",
+    "check_in_time": "09:29:00",
+    "check_out_time": "17:25:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 66,
+    "employee_id": 14,
+    "date": "2025-09-26",
+    "check_in_time": "09:48:00",
+    "check_out_time": "17:08:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 67,
+    "employee_id": 15,
+    "date": "2025-09-26",
+    "check_in_time": "09:27:00",
+    "check_out_time": "20:20:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 68,
+    "employee_id": 17,
+    "date": "2025-09-26",
+    "check_in_time": "08:21:00",
+    "check_out_time": "19:45:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 69,
+    "employee_id": 18,
+    "date": "2025-09-26",
+    "check_in_time": "09:33:00",
+    "check_out_time": "19:39:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 70,
+    "employee_id": 19,
+    "date": "2025-09-26",
+    "check_in_time": "09:08:00",
+    "check_out_time": "19:04:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 71,
+    "employee_id": 20,
+    "date": "2025-09-26",
+    "check_in_time": "10:38:00",
+    "check_out_time": "17:08:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 72,
+    "employee_id": 21,
+    "date": "2025-09-26",
+    "check_in_time": "10:16:00",
+    "check_out_time": "18:53:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 73,
+    "employee_id": 22,
+    "date": "2025-09-26",
+    "check_in_time": "09:41:00",
+    "check_out_time": "19:52:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 74,
+    "employee_id": 24,
+    "date": "2025-09-26",
+    "check_in_time": "08:15:00",
+    "check_out_time": "18:10:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 75,
+    "employee_id": 25,
+    "date": "2025-09-26",
+    "check_in_time": "09:56:00",
+    "check_out_time": "18:33:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 76,
+    "employee_id": 1,
+    "date": "2025-09-27",
+    "check_in_time": "08:42:00",
+    "check_out_time": "20:13:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 77,
+    "employee_id": 2,
+    "date": "2025-09-27",
+    "check_in_time": "10:28:00",
+    "check_out_time": "18:30:00",
+    "notes": "Team meeting",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 78,
+    "employee_id": 3,
+    "date": "2025-09-27",
+    "check_in_time": "10:48:00",
+    "check_out_time": "19:28:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 79,
+    "employee_id": 4,
+    "date": "2025-09-27",
+    "check_in_time": "10:09:00",
+    "check_out_time": "18:36:00",
+    "notes": "Client presentation",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 80,
+    "employee_id": 5,
+    "date": "2025-09-27",
+    "check_in_time": "09:30:00",
+    "check_out_time": "20:07:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 81,
+    "employee_id": 6,
+    "date": "2025-09-27",
+    "check_in_time": "08:53:00",
+    "check_out_time": "18:02:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 82,
+    "employee_id": 7,
+    "date": "2025-09-27",
+    "check_in_time": "09:53:00",
+    "check_out_time": "20:08:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 83,
+    "employee_id": 8,
+    "date": "2025-09-27",
+    "check_in_time": "09:24:00",
+    "check_out_time": "19:42:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 84,
+    "employee_id": 9,
+    "date": "2025-09-27",
+    "check_in_time": "09:25:00",
+    "check_out_time": "17:59:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 85,
+    "employee_id": 10,
+    "date": "2025-09-27",
+    "check_in_time": "09:50:00",
+    "check_out_time": "19:03:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 86,
+    "employee_id": 11,
+    "date": "2025-09-27",
+    "check_in_time": "10:36:00",
+    "check_out_time": "17:04:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 87,
+    "employee_id": 12,
+    "date": "2025-09-27",
+    "check_in_time": "10:41:00",
+    "check_out_time": "20:22:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 88,
+    "employee_id": 13,
+    "date": "2025-09-27",
+    "check_in_time": "09:35:00",
+    "check_out_time": "18:45:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 89,
+    "employee_id": 14,
+    "date": "2025-09-27",
+    "check_in_time": "08:34:00",
+    "check_out_time": "18:32:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 90,
+    "employee_id": 16,
+    "date": "2025-09-27",
+    "check_in_time": "10:11:00",
+    "check_out_time": "20:02:00",
+    "notes": "Client presentation",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 91,
+    "employee_id": 17,
+    "date": "2025-09-27",
+    "check_in_time": "09:24:00",
+    "check_out_time": "19:17:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 92,
+    "employee_id": 18,
+    "date": "2025-09-27",
+    "check_in_time": "08:44:00",
+    "check_out_time": "17:33:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 93,
+    "employee_id": 20,
+    "date": "2025-09-27",
+    "check_in_time": "08:27:00",
+    "check_out_time": "20:58:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 94,
+    "employee_id": 22,
+    "date": "2025-09-27",
+    "check_in_time": "09:03:00",
+    "check_out_time": "19:35:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 95,
+    "employee_id": 23,
+    "date": "2025-09-27",
+    "check_in_time": "08:19:00",
+    "check_out_time": "18:40:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 96,
+    "employee_id": 24,
+    "date": "2025-09-27",
+    "check_in_time": "10:33:00",
+    "check_out_time": "20:12:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 97,
+    "employee_id": 1,
+    "date": "2025-09-28",
+    "check_in_time": "10:21:00",
+    "check_out_time": "20:49:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 98,
+    "employee_id": 2,
+    "date": "2025-09-28",
+    "check_in_time": "10:29:00",
+    "check_out_time": "18:37:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 99,
+    "employee_id": 3,
+    "date": "2025-09-28",
+    "check_in_time": "10:47:00",
+    "check_out_time": "20:59:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 100,
+    "employee_id": 4,
+    "date": "2025-09-28",
+    "check_in_time": "08:09:00",
+    "check_out_time": "20:46:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 101,
+    "employee_id": 5,
+    "date": "2025-09-28",
+    "check_in_time": "08:53:00",
+    "check_out_time": "17:43:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 102,
+    "employee_id": 6,
+    "date": "2025-09-28",
+    "check_in_time": "09:05:00",
+    "check_out_time": "17:32:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 103,
+    "employee_id": 7,
+    "date": "2025-09-28",
+    "check_in_time": "08:21:00",
+    "check_out_time": "17:57:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 104,
+    "employee_id": 8,
+    "date": "2025-09-28",
+    "check_in_time": "10:40:00",
+    "check_out_time": "19:46:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 105,
+    "employee_id": 10,
+    "date": "2025-09-28",
+    "check_in_time": "08:05:00",
+    "check_out_time": "17:51:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 106,
+    "employee_id": 11,
+    "date": "2025-09-28",
+    "check_in_time": "08:47:00",
+    "check_out_time": "19:39:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 107,
+    "employee_id": 12,
+    "date": "2025-09-28",
+    "check_in_time": "10:18:00",
+    "check_out_time": "18:58:00",
+    "notes": "Team meeting",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 108,
+    "employee_id": 14,
+    "date": "2025-09-28",
+    "check_in_time": "08:31:00",
+    "check_out_time": "17:17:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 109,
+    "employee_id": 15,
+    "date": "2025-09-28",
+    "check_in_time": "08:27:00",
+    "check_out_time": "18:53:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 110,
+    "employee_id": 16,
+    "date": "2025-09-28",
+    "check_in_time": "10:47:00",
+    "check_out_time": "18:14:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 111,
+    "employee_id": 17,
+    "date": "2025-09-28",
+    "check_in_time": "08:59:00",
+    "check_out_time": "18:17:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 112,
+    "employee_id": 18,
+    "date": "2025-09-28",
+    "check_in_time": "08:01:00",
+    "check_out_time": "20:31:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 113,
+    "employee_id": 20,
+    "date": "2025-09-28",
+    "check_in_time": "09:30:00",
+    "check_out_time": "19:43:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 114,
+    "employee_id": 22,
+    "date": "2025-09-28",
+    "check_in_time": "09:01:00",
+    "check_out_time": "17:38:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 115,
+    "employee_id": 23,
+    "date": "2025-09-28",
+    "check_in_time": "09:52:00",
+    "check_out_time": "18:57:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 116,
+    "employee_id": 24,
+    "date": "2025-09-28",
+    "check_in_time": "08:03:00",
+    "check_out_time": "20:02:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 117,
+    "employee_id": 25,
+    "date": "2025-09-28",
+    "check_in_time": "08:41:00",
+    "check_out_time": "17:00:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 118,
+    "employee_id": 2,
+    "date": "2025-09-29",
+    "check_in_time": "09:51:00",
+    "check_out_time": "18:48:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 119,
+    "employee_id": 3,
+    "date": "2025-09-29",
+    "check_in_time": "08:25:00",
+    "check_out_time": "17:55:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 120,
+    "employee_id": 4,
+    "date": "2025-09-29",
+    "check_in_time": "08:40:00",
+    "check_out_time": "18:54:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 121,
+    "employee_id": 5,
+    "date": "2025-09-29",
+    "check_in_time": "09:29:00",
+    "check_out_time": "18:41:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 122,
+    "employee_id": 6,
+    "date": "2025-09-29",
+    "check_in_time": "09:16:00",
+    "check_out_time": "17:11:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 123,
+    "employee_id": 7,
+    "date": "2025-09-29",
+    "check_in_time": "09:36:00",
+    "check_out_time": "20:01:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 124,
+    "employee_id": 9,
+    "date": "2025-09-29",
+    "check_in_time": "08:34:00",
+    "check_out_time": "17:37:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 125,
+    "employee_id": 10,
+    "date": "2025-09-29",
+    "check_in_time": "08:46:00",
+    "check_out_time": "17:08:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 126,
+    "employee_id": 12,
+    "date": "2025-09-29",
+    "check_in_time": "08:25:00",
+    "check_out_time": "17:40:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 127,
+    "employee_id": 13,
+    "date": "2025-09-29",
+    "check_in_time": "08:14:00",
+    "check_out_time": "17:46:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 128,
+    "employee_id": 14,
+    "date": "2025-09-29",
+    "check_in_time": "10:29:00",
+    "check_out_time": "19:50:00",
+    "notes": "Team meeting",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 129,
+    "employee_id": 16,
+    "date": "2025-09-29",
+    "check_in_time": "09:55:00",
+    "check_out_time": "20:55:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 130,
+    "employee_id": 17,
+    "date": "2025-09-29",
+    "check_in_time": "08:46:00",
+    "check_out_time": "18:28:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 131,
+    "employee_id": 18,
+    "date": "2025-09-29",
+    "check_in_time": "10:27:00",
+    "check_out_time": "20:02:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 132,
+    "employee_id": 19,
+    "date": "2025-09-29",
+    "check_in_time": "10:39:00",
+    "check_out_time": "19:40:00",
+    "notes": "Team meeting",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 133,
+    "employee_id": 20,
+    "date": "2025-09-29",
+    "check_in_time": "10:31:00",
+    "check_out_time": "19:09:00",
+    "notes": "Client presentation",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 134,
+    "employee_id": 21,
+    "date": "2025-09-29",
+    "check_in_time": "08:17:00",
+    "check_out_time": "20:25:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 135,
+    "employee_id": 23,
+    "date": "2025-09-29",
+    "check_in_time": "09:34:00",
+    "check_out_time": "17:37:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 136,
+    "employee_id": 24,
+    "date": "2025-09-29",
+    "check_in_time": "08:28:00",
+    "check_out_time": "19:23:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 137,
+    "employee_id": 25,
+    "date": "2025-09-29",
+    "check_in_time": "10:15:00",
+    "check_out_time": "19:29:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 138,
+    "employee_id": 1,
+    "date": "2025-09-30",
+    "check_in_time": "10:31:00",
+    "check_out_time": "20:22:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 139,
+    "employee_id": 2,
+    "date": "2025-09-30",
+    "check_in_time": "09:27:00",
+    "check_out_time": "18:59:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 140,
+    "employee_id": 3,
+    "date": "2025-09-30",
+    "check_in_time": "10:40:00",
+    "check_out_time": "20:30:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 141,
+    "employee_id": 4,
+    "date": "2025-09-30",
+    "check_in_time": "09:22:00",
+    "check_out_time": "17:27:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 142,
+    "employee_id": 5,
+    "date": "2025-09-30",
+    "check_in_time": "09:35:00",
+    "check_out_time": "19:37:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 143,
+    "employee_id": 6,
+    "date": "2025-09-30",
+    "check_in_time": "09:24:00",
+    "check_out_time": "17:26:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 144,
+    "employee_id": 7,
+    "date": "2025-09-30",
+    "check_in_time": "08:01:00",
+    "check_out_time": "20:00:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 145,
+    "employee_id": 8,
+    "date": "2025-09-30",
+    "check_in_time": "08:30:00",
+    "check_out_time": "19:10:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 146,
+    "employee_id": 9,
+    "date": "2025-09-30",
+    "check_in_time": "09:14:00",
+    "check_out_time": "18:00:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 147,
+    "employee_id": 10,
+    "date": "2025-09-30",
+    "check_in_time": "09:22:00",
+    "check_out_time": "18:23:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 148,
+    "employee_id": 11,
+    "date": "2025-09-30",
+    "check_in_time": "08:42:00",
+    "check_out_time": "17:48:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 149,
+    "employee_id": 12,
+    "date": "2025-09-30",
+    "check_in_time": "09:33:00",
+    "check_out_time": "19:30:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 150,
+    "employee_id": 13,
+    "date": "2025-09-30",
+    "check_in_time": "09:10:00",
+    "check_out_time": "18:14:00",
+    "notes": "Working on project",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 151,
+    "employee_id": 14,
+    "date": "2025-09-30",
+    "check_in_time": "08:47:00",
+    "check_out_time": "19:02:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 152,
+    "employee_id": 15,
+    "date": "2025-09-30",
+    "check_in_time": "10:26:00",
+    "check_out_time": "20:40:00",
+    "notes": "Client presentation",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 153,
+    "employee_id": 16,
+    "date": "2025-09-30",
+    "check_in_time": "08:23:00",
+    "check_out_time": "19:59:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 154,
+    "employee_id": 18,
+    "date": "2025-09-30",
+    "check_in_time": "09:27:00",
+    "check_out_time": "20:41:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 155,
+    "employee_id": 19,
+    "date": "2025-09-30",
+    "check_in_time": "08:14:00",
+    "check_out_time": "17:20:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 156,
+    "employee_id": 20,
+    "date": "2025-09-30",
+    "check_in_time": "10:18:00",
+    "check_out_time": "18:53:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 157,
+    "employee_id": 21,
+    "date": "2025-09-30",
+    "check_in_time": "10:17:00",
+    "check_out_time": "17:39:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 158,
+    "employee_id": 22,
+    "date": "2025-09-30",
+    "check_in_time": "10:21:00",
+    "check_out_time": "19:59:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 159,
+    "employee_id": 23,
+    "date": "2025-09-30",
+    "check_in_time": "10:40:00",
+    "check_out_time": "19:39:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 160,
+    "employee_id": 24,
+    "date": "2025-09-30",
+    "check_in_time": "10:32:00",
+    "check_out_time": "19:06:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 161,
+    "employee_id": 25,
+    "date": "2025-09-30",
+    "check_in_time": "10:30:00",
+    "check_out_time": "20:49:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 162,
+    "employee_id": 2,
+    "date": "2025-10-01",
+    "check_in_time": "09:48:00",
+    "check_out_time": "19:30:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 163,
+    "employee_id": 3,
+    "date": "2025-10-01",
+    "check_in_time": "10:46:00",
+    "check_out_time": "19:39:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 164,
+    "employee_id": 4,
+    "date": "2025-10-01",
+    "check_in_time": "09:14:00",
+    "check_out_time": "17:44:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 165,
+    "employee_id": 5,
+    "date": "2025-10-01",
+    "check_in_time": "08:17:00",
+    "check_out_time": "20:21:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 166,
+    "employee_id": 6,
+    "date": "2025-10-01",
+    "check_in_time": "08:59:00",
+    "check_out_time": "20:01:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 167,
+    "employee_id": 7,
+    "date": "2025-10-01",
+    "check_in_time": "08:13:00",
+    "check_out_time": "17:15:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 168,
+    "employee_id": 8,
+    "date": "2025-10-01",
+    "check_in_time": "08:27:00",
+    "check_out_time": "18:51:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 169,
+    "employee_id": 9,
+    "date": "2025-10-01",
+    "check_in_time": "08:11:00",
+    "check_out_time": "18:02:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 170,
+    "employee_id": 10,
+    "date": "2025-10-01",
+    "check_in_time": "10:08:00",
+    "check_out_time": "18:31:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 171,
+    "employee_id": 11,
+    "date": "2025-10-01",
+    "check_in_time": "09:57:00",
+    "check_out_time": "18:17:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 172,
+    "employee_id": 12,
+    "date": "2025-10-01",
+    "check_in_time": "10:27:00",
+    "check_out_time": "18:36:00",
+    "notes": "Client presentation",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 173,
+    "employee_id": 13,
+    "date": "2025-10-01",
+    "check_in_time": "08:36:00",
+    "check_out_time": "17:55:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 174,
+    "employee_id": 14,
+    "date": "2025-10-01",
+    "check_in_time": "09:34:00",
+    "check_out_time": "19:50:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 175,
+    "employee_id": 15,
+    "date": "2025-10-01",
+    "check_in_time": "09:46:00",
+    "check_out_time": "17:22:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 176,
+    "employee_id": 16,
+    "date": "2025-10-01",
+    "check_in_time": "08:35:00",
+    "check_out_time": "20:04:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 177,
+    "employee_id": 18,
+    "date": "2025-10-01",
+    "check_in_time": "08:58:00",
+    "check_out_time": "19:03:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 178,
+    "employee_id": 19,
+    "date": "2025-10-01",
+    "check_in_time": "09:33:00",
+    "check_out_time": "17:01:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 179,
+    "employee_id": 20,
+    "date": "2025-10-01",
+    "check_in_time": "10:15:00",
+    "check_out_time": "18:42:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 180,
+    "employee_id": 21,
+    "date": "2025-10-01",
+    "check_in_time": "10:48:00",
+    "check_out_time": "19:01:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 181,
+    "employee_id": 22,
+    "date": "2025-10-01",
+    "check_in_time": "10:42:00",
+    "check_out_time": "17:15:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 182,
+    "employee_id": 23,
+    "date": "2025-10-01",
+    "check_in_time": "08:45:00",
+    "check_out_time": "19:10:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 183,
+    "employee_id": 24,
+    "date": "2025-10-01",
+    "check_in_time": "10:00:00",
+    "check_out_time": "18:36:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 184,
+    "employee_id": 25,
+    "date": "2025-10-01",
+    "check_in_time": "09:06:00",
+    "check_out_time": "18:30:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 185,
+    "employee_id": 1,
+    "date": "2025-10-02",
+    "check_in_time": "10:57:00",
+    "check_out_time": "18:39:00",
+    "notes": "Client presentation",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 186,
+    "employee_id": 2,
+    "date": "2025-10-02",
+    "check_in_time": "10:32:00",
+    "check_out_time": "19:40:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 187,
+    "employee_id": 3,
+    "date": "2025-10-02",
+    "check_in_time": "08:12:00",
+    "check_out_time": "19:21:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 188,
+    "employee_id": 5,
+    "date": "2025-10-02",
+    "check_in_time": "08:48:00",
+    "check_out_time": "17:59:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 189,
+    "employee_id": 6,
+    "date": "2025-10-02",
+    "check_in_time": "10:19:00",
+    "check_out_time": "19:12:00",
+    "notes": "Completed all tasks",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 190,
+    "employee_id": 7,
+    "date": "2025-10-02",
+    "check_in_time": "09:11:00",
+    "check_out_time": "19:38:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 191,
+    "employee_id": 8,
+    "date": "2025-10-02",
+    "check_in_time": "09:48:00",
+    "check_out_time": "20:38:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 192,
+    "employee_id": 15,
+    "date": "2025-10-02",
+    "check_in_time": "08:05:00",
+    "check_out_time": "17:23:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 193,
+    "employee_id": 17,
+    "date": "2025-10-02",
+    "check_in_time": "09:57:00",
+    "check_out_time": "18:11:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 194,
+    "employee_id": 18,
+    "date": "2025-10-02",
+    "check_in_time": "08:33:00",
+    "check_out_time": "17:59:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 195,
+    "employee_id": 19,
+    "date": "2025-10-02",
+    "check_in_time": "09:18:00",
+    "check_out_time": "20:54:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 196,
+    "employee_id": 20,
+    "date": "2025-10-02",
+    "check_in_time": "10:16:00",
+    "check_out_time": "18:48:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 197,
+    "employee_id": 21,
+    "date": "2025-10-02",
+    "check_in_time": "10:06:00",
+    "check_out_time": "17:41:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 198,
+    "employee_id": 22,
+    "date": "2025-10-02",
+    "check_in_time": "10:04:00",
+    "check_out_time": "17:21:00",
+    "notes": "Team meeting",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 199,
+    "employee_id": 23,
+    "date": "2025-10-02",
+    "check_in_time": "08:51:00",
+    "check_out_time": "17:19:00",
+    "notes": "Regular working day",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 200,
+    "employee_id": 24,
+    "date": "2025-10-02",
+    "check_in_time": "09:57:00",
+    "check_out_time": "17:41:00",
+    "notes": "Team meeting",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 201,
+    "employee_id": 25,
+    "date": "2025-10-02",
+    "check_in_time": "08:38:00",
+    "check_out_time": "20:54:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 202,
+    "employee_id": 1,
+    "date": "2025-10-03",
+    "check_in_time": "08:47:00",
+    "check_out_time": "20:40:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 203,
+    "employee_id": 2,
+    "date": "2025-10-03",
+    "check_in_time": "08:14:00",
+    "check_out_time": "19:37:00",
+    "notes": "",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 204,
+    "employee_id": 3,
+    "date": "2025-10-03",
+    "check_in_time": "08:27:00",
+    "check_out_time": "18:51:00",
+    "notes": "",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 205,
+    "employee_id": 4,
+    "date": "2025-10-03",
+    "check_in_time": "10:07:00",
+    "check_out_time": "17:05:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 206,
+    "employee_id": 5,
+    "date": "2025-10-03",
+    "check_in_time": "09:09:00",
+    "check_out_time": "20:10:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 207,
+    "employee_id": 6,
+    "date": "2025-10-03",
+    "check_in_time": "09:29:00",
+    "check_out_time": "18:09:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 208,
+    "employee_id": 7,
+    "date": "2025-10-03",
+    "check_in_time": "08:19:00",
+    "check_out_time": "20:37:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 209,
+    "employee_id": 8,
+    "date": "2025-10-03",
+    "check_in_time": "08:55:00",
+    "check_out_time": "17:14:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 210,
+    "employee_id": 9,
+    "date": "2025-10-03",
+    "check_in_time": "10:25:00",
+    "check_out_time": "19:37:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 211,
+    "employee_id": 10,
+    "date": "2025-10-03",
+    "check_in_time": "08:14:00",
+    "check_out_time": "19:00:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 212,
+    "employee_id": 11,
+    "date": "2025-10-03",
+    "check_in_time": "08:41:00",
+    "check_out_time": "17:53:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 213,
+    "employee_id": 12,
+    "date": "2025-10-03",
+    "check_in_time": "10:02:00",
+    "check_out_time": "17:05:00",
+    "notes": "Working on project",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 214,
+    "employee_id": 13,
+    "date": "2025-10-03",
+    "check_in_time": "10:50:00",
+    "check_out_time": "17:53:00",
+    "notes": "",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 215,
+    "employee_id": 14,
+    "date": "2025-10-03",
+    "check_in_time": "09:28:00",
+    "check_out_time": "20:12:00",
+    "notes": "Completed all tasks",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 216,
+    "employee_id": 16,
+    "date": "2025-10-03",
+    "check_in_time": "09:14:00",
+    "check_out_time": "20:36:00",
+    "notes": "Regular working day",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 217,
+    "employee_id": 17,
+    "date": "2025-10-03",
+    "check_in_time": "08:12:00",
+    "check_out_time": "20:01:00",
+    "notes": "Working on project",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 218,
+    "employee_id": 18,
+    "date": "2025-10-03",
+    "check_in_time": "08:38:00",
+    "check_out_time": "20:06:00",
+    "notes": "Team meeting",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 219,
+    "employee_id": 19,
+    "date": "2025-10-03",
+    "check_in_time": "08:02:00",
+    "check_out_time": "17:10:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 220,
+    "employee_id": 20,
+    "date": "2025-10-03",
+    "check_in_time": "09:09:00",
+    "check_out_time": "17:07:00",
+    "notes": "Client presentation",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 221,
+    "employee_id": 21,
+    "date": "2025-10-03",
+    "check_in_time": "09:25:00",
+    "check_out_time": "20:44:00",
+    "notes": "Client presentation",
+    "status": "Overtime"
+  },
+  {
+    "attendance_id": 222,
+    "employee_id": 22,
+    "date": "2025-10-03",
+    "check_in_time": "08:30:00",
+    "check_out_time": "17:24:00",
+    "notes": "Completed all tasks",
+    "status": "Present"
+  },
+  {
+    "attendance_id": 223,
+    "employee_id": 23,
+    "date": "2025-10-03",
+    "check_in_time": "10:03:00",
+    "check_out_time": "20:27:00",
+    "notes": "Regular working day",
+    "status": "Late"
+  },
+  {
+    "attendance_id": 224,
+    "employee_id": 24,
+    "date": "2025-10-03",
+    "check_in_time": "10:42:00",
+    "check_out_time": "19:27:00",
+    "notes": "Working on project",
+    "status": "Late"
+  }
+]
