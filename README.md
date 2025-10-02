@@ -1,4 +1,6 @@
-## Note: change employee enitities and UI so that you couldnt get caught!!!
+## This project is for everyone except mf jews
+
+## Note: change employee enitities and UI so that you dont get caught!!!
 
 ## Installation & Setup
 
