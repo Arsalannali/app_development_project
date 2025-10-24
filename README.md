@@ -1,3 +1,8 @@
+# HALAAAA MADRIDDDDDDDDDDDDD
+# Followwww meeeeee on Spotifyyyyyyyyyyy : 
+**https://open.spotify.com/user/312eb5tmrmuzg6pmjp45uh5qqc4u?si=dD5BuO2mSe2u-vXbPbvejQ**
+## Change the entities and UI so that u dont get caught
+
 # Business Management System
 
 A comprehensive Flask-based web application for managing business operations across multiple modules including HR, Finance, CRM, and Trading.
@@ -141,7 +146,7 @@ app_development_project/
    - Open your browser and go to: `http://localhost:5003`
    - Default login credentials:
      - Username: `admin`
-     - Password: `admin123`
+     - Password: `arsi`
 
 ## 🎨 UI Features
 
