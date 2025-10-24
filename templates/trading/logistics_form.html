@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}{% if logistics %}Edit{% else %}Add{% endif %} Logistics - Trading Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-truck"></i> {% if logistics %}Edit{% else %}Add{% endif %} Logistics Record</h1>
+            <a href="{{ url_for('trading.logistics_list') }}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Logistics
+            </a>
+        </div>
+
+        <div class="card shadow">
+            <div class="card-body">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="order_id" class="form-label">Order</label>
+                                <select class="form-select" id="order_id" name="order_id" required>
+                                    <option value="">Select Order</option>
+                                    {% for order in orders %}
+                                    <option value="{{ order.id }}" {% if logistics and logistics.order_id == order.id %}selected{% endif %}>
+                                        #{{ order.id }} - {{ order.customer_name }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="shipping_method" class="form-label">Shipping Method</label>
+                                <select class="form-select" id="shipping_method" name="shipping_method" required>
+                                    <option value="">Select Shipping Method</option>
+                                    <option value="Standard" {% if logistics and logistics.shipping_method == 'Standard' %}selected{% endif %}>Standard</option>
+                                    <option value="Express" {% if logistics and logistics.shipping_method == 'Express' %}selected{% endif %}>Express</option>
+                                    <option value="Overnight" {% if logistics and logistics.shipping_method == 'Overnight' %}selected{% endif %}>Overnight</option>
+                                    <option value="Pickup" {% if logistics and logistics.shipping_method == 'Pickup' %}selected{% endif %}>Pickup</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="tracking_number" class="form-label">Tracking Number</label>
+                                <input type="text" class="form-control" id="tracking_number" name="tracking_number" 
+                                       value="{{ logistics.tracking_number if logistics else '' }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="status" class="form-label">Status</label>
+                                <select class="form-select" id="status" name="status" required>
+                                    <option value="">Select Status</option>
+                                    <option value="Processing" {% if logistics and logistics.status == 'Processing' %}selected{% endif %}>Processing</option>
+                                    <option value="Shipped" {% if logistics and logistics.status == 'Shipped' %}selected{% endif %}>Shipped</option>
+                                    <option value="In Transit" {% if logistics and logistics.status == 'In Transit' %}selected{% endif %}>In Transit</option>
+                                    <option value="Delivered" {% if logistics and logistics.status == 'Delivered' %}selected{% endif %}>Delivered</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="ship_date" class="form-label">Ship Date</label>
+                                <input type="date" class="form-control" id="ship_date" name="ship_date" 
+                                       value="{{ logistics.ship_date if logistics else '' }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="delivery_date" class="form-label">Delivery Date</label>
+                                <input type="date" class="form-control" id="delivery_date" name="delivery_date" 
+                                       value="{{ logistics.delivery_date if logistics else '' }}">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notes</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3">{{ logistics.notes if logistics else '' }}</textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ url_for('trading.logistics_list') }}" class="btn btn-secondary me-md-2">Cancel</a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-circle"></i> {% if logistics %}Update{% else %}Add{% endif %} Logistics Record
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "customer": "TechCorp Solutions",
+    "invoice_number": "INV-2025-101",
+    "amount": 25000.00,
+    "due_date": "2025-11-15",
+    "description": "Software development services",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "customer": "Global Industries Ltd",
+    "invoice_number": "INV-2025-102",
+    "amount": 15000.00,
+    "due_date": "2025-11-20",
+    "description": "Consulting services",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "customer": "StartupXYZ Inc",
+    "invoice_number": "INV-2025-103",
+    "amount": 18000.00,
+    "due_date": "2025-11-25",
+    "description": "Digital marketing campaign",
+    "status": "Pending"
+  },
+  {
+    "id": 4,
+    "customer": "Enterprise Solutions",
+    "invoice_number": "INV-2025-104",
+    "amount": 35000.00,
+    "due_date": "2025-11-10",
+    "description": "System integration project",
+    "status": "Paid"
+  },
+  {
+    "id": 5,
+    "customer": "Small Business Corp",
+    "invoice_number": "INV-2025-105",
+    "amount": 8500.00,
+    "due_date": "2025-11-30",
+    "description": "Website development services",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "customer": "Innovation Hub",
+    "invoice_number": "INV-2025-106",
+    "amount": 12000.00,
+    "due_date": "2025-11-05",
+    "description": "Training and development services",
+    "status": "Overdue"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "customer_id": 1,
+    "customer_name": "TechCorp Solutions",
+    "rating": 5,
+    "subject": "Excellent Service",
+    "message": "The software development team delivered an outstanding solution that exceeded our expectations. Highly recommended!",
+    "date": "2025-10-24",
+    "status": "Reviewed"
+  },
+  {
+    "id": 2,
+    "customer_id": 2,
+    "customer_name": "Global Industries Ltd",
+    "rating": 4,
+    "subject": "Good Consulting Services",
+    "message": "The consulting team provided valuable insights and helped us optimize our business processes. Very professional service.",
+    "date": "2025-10-23",
+    "status": "Reviewed"
+  },
+  {
+    "id": 3,
+    "customer_id": 3,
+    "customer_name": "StartupXYZ Inc",
+    "rating": 5,
+    "subject": "Amazing Marketing Campaign",
+    "message": "The digital marketing campaign was incredibly effective. Our social media engagement increased by 300%!",
+    "date": "2025-10-22",
+    "status": "Reviewed"
+  },
+  {
+    "id": 4,
+    "customer_id": 4,
+    "customer_name": "Enterprise Solutions",
+    "rating": 4,
+    "subject": "Professional System Integration",
+    "message": "The system integration project was completed on time and within budget. The team was very professional and knowledgeable.",
+    "date": "2025-10-21",
+    "status": "Reviewed"
+  },
+  {
+    "id": 5,
+    "customer_id": 5,
+    "customer_name": "Small Business Corp",
+    "rating": 3,
+    "subject": "Website Development",
+    "message": "The website development was good, but there were some delays in delivery. Overall satisfied with the final result.",
+    "date": "2025-10-20",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "customer_id": 6,
+    "customer_name": "Innovation Hub",
+    "rating": 5,
+    "subject": "Outstanding Training Program",
+    "message": "The training program was comprehensive and well-structured. Our team learned a lot and improved their skills significantly.",
+    "date": "2025-10-19",
+    "status": "Reviewed"
+  }
+]

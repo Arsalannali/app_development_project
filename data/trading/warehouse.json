@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "product_id": 1,
+    "product_name": "Laptop Computer",
+    "location": "Warehouse A - Section 1",
+    "quantity": 25,
+    "min_stock": 10,
+    "notes": "High-value electronics storage",
+    "last_updated": "2025-10-24"
+  },
+  {
+    "id": 2,
+    "product_id": 2,
+    "product_name": "Office Chair",
+    "location": "Warehouse B - Section 2",
+    "quantity": 50,
+    "min_stock": 20,
+    "notes": "Furniture storage area",
+    "last_updated": "2025-10-24"
+  },
+  {
+    "id": 3,
+    "product_id": 3,
+    "product_name": "Printer",
+    "location": "Warehouse A - Section 2",
+    "quantity": 15,
+    "min_stock": 5,
+    "notes": "Electronics storage with climate control",
+    "last_updated": "2025-10-23"
+  },
+  {
+    "id": 4,
+    "product_id": 4,
+    "product_name": "Desk",
+    "location": "Warehouse B - Section 1",
+    "quantity": 30,
+    "min_stock": 15,
+    "notes": "Large furniture storage",
+    "last_updated": "2025-10-24"
+  },
+  {
+    "id": 5,
+    "product_id": 5,
+    "product_name": "Monitor",
+    "location": "Warehouse A - Section 3",
+    "quantity": 40,
+    "min_stock": 20,
+    "notes": "Electronics storage with anti-static protection",
+    "last_updated": "2025-10-24"
+  },
+  {
+    "id": 6,
+    "product_id": 6,
+    "product_name": "Office Supplies Kit",
+    "location": "Warehouse C - Section 1",
+    "quantity": 100,
+    "min_stock": 50,
+    "notes": "General supplies storage",
+    "last_updated": "2025-10-24"
+  }
+]

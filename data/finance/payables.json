@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "vendor": "ABC Office Supplies",
+    "invoice_number": "INV-2025-001",
+    "amount": 2500.00,
+    "due_date": "2025-11-15",
+    "description": "Office supplies and stationery",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "vendor": "XYZ Technology Solutions",
+    "invoice_number": "INV-2025-002",
+    "amount": 8500.00,
+    "due_date": "2025-11-20",
+    "description": "Computer equipment and software licenses",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "vendor": "DEF Marketing Agency",
+    "invoice_number": "INV-2025-003",
+    "amount": 15000.00,
+    "due_date": "2025-11-25",
+    "description": "Digital marketing campaign services",
+    "status": "Pending"
+  },
+  {
+    "id": 4,
+    "vendor": "GHI Cleaning Services",
+    "invoice_number": "INV-2025-004",
+    "amount": 3200.00,
+    "due_date": "2025-11-10",
+    "description": "Monthly office cleaning services",
+    "status": "Paid"
+  },
+  {
+    "id": 5,
+    "vendor": "JKL Legal Services",
+    "invoice_number": "INV-2025-005",
+    "amount": 5000.00,
+    "due_date": "2025-11-30",
+    "description": "Legal consultation and documentation",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "vendor": "MNO Internet Services",
+    "invoice_number": "INV-2025-006",
+    "amount": 1800.00,
+    "due_date": "2025-11-05",
+    "description": "Monthly internet and telecom services",
+    "status": "Overdue"
+  }
+]

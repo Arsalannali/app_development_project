@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "date": "2025-10-24",
+    "account": "Cash",
+    "description": "Office supplies purchase",
+    "type": "Debit",
+    "amount": 2500.00
+  },
+  {
+    "id": 2,
+    "date": "2025-10-24",
+    "account": "Office Supplies",
+    "description": "Office supplies purchase",
+    "type": "Credit",
+    "amount": 2500.00
+  },
+  {
+    "id": 3,
+    "date": "2025-10-23",
+    "account": "Accounts Receivable",
+    "description": "Payment from client ABC Corp",
+    "type": "Debit",
+    "amount": 15000.00
+  },
+  {
+    "id": 4,
+    "date": "2025-10-23",
+    "account": "Revenue",
+    "description": "Payment from client ABC Corp",
+    "type": "Credit",
+    "amount": 15000.00
+  },
+  {
+    "id": 5,
+    "date": "2025-10-22",
+    "account": "Bank Account",
+    "description": "Salary payments for employees",
+    "type": "Debit",
+    "amount": 45000.00
+  },
+  {
+    "id": 6,
+    "date": "2025-10-22",
+    "account": "Salary Expense",
+    "description": "Salary payments for employees",
+    "type": "Credit",
+    "amount": 45000.00
+  },
+  {
+    "id": 7,
+    "date": "2025-10-21",
+    "account": "Equipment",
+    "description": "New computer equipment purchase",
+    "type": "Debit",
+    "amount": 8500.00
+  },
+  {
+    "id": 8,
+    "date": "2025-10-21",
+    "account": "Cash",
+    "description": "New computer equipment purchase",
+    "type": "Credit",
+    "amount": 8500.00
+  },
+  {
+    "id": 9,
+    "date": "2025-10-20",
+    "account": "Accounts Payable",
+    "description": "Payment to vendor XYZ Ltd",
+    "type": "Debit",
+    "amount": 3200.00
+  },
+  {
+    "id": 10,
+    "date": "2025-10-20",
+    "account": "Cash",
+    "description": "Payment to vendor XYZ Ltd",
+    "type": "Credit",
+    "amount": 3200.00
+  }
+]

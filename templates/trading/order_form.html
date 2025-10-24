@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}{% if order %}Edit{% else %}Add{% endif %} Order - Trading Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-cart"></i> {% if order %}Edit{% else %}Add{% endif %} Order</h1>
+            <a href="{{ url_for('trading.orders_list') }}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Orders
+            </a>
+        </div>
+
+        <div class="card shadow">
+            <div class="card-body">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="customer_name" class="form-label">Customer Name</label>
+                                <input type="text" class="form-control" id="customer_name" name="customer_name" 
+                                       value="{{ order.customer_name if order else '' }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="product_id" class="form-label">Product</label>
+                                <select class="form-select" id="product_id" name="product_id" required>
+                                    <option value="">Select Product</option>
+                                    {% for product in products %}
+                                    <option value="{{ product.id }}" {% if order and order.product_id == product.id %}selected{% endif %}>
+                                        {{ product.name }} - ${{ product.price }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="quantity" name="quantity" 
+                                       value="{{ order.quantity if order else '' }}" min="1" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="total" class="form-label">Total Amount</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" id="total" name="total" 
+                                           value="{{ order.total if order else '' }}" step="0.01" min="0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="status" class="form-label">Status</label>
+                                <select class="form-select" id="status" name="status" required>
+                                    <option value="">Select Status</option>
+                                    <option value="Pending" {% if order and order.status == 'Pending' %}selected{% endif %}>Pending</option>
+                                    <option value="Processing" {% if order and order.status == 'Processing' %}selected{% endif %}>Processing</option>
+                                    <option value="Completed" {% if order and order.status == 'Completed' %}selected{% endif %}>Completed</option>
+                                    <option value="Cancelled" {% if order and order.status == 'Cancelled' %}selected{% endif %}>Cancelled</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Order Date</label>
+                                <input type="date" class="form-control" id="date" name="date" 
+                                       value="{{ order.date if order else '' }}" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notes</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3">{{ order.notes if order else '' }}</textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ url_for('trading.orders_list') }}" class="btn btn-secondary me-md-2">Cancel</a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-circle"></i> {% if order %}Update{% else %}Add{% endif %} Order
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

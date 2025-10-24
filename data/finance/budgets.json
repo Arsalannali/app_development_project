@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "category": "Marketing",
+    "budgeted_amount": 50000.00,
+    "spent_amount": 32000.00,
+    "period": "Monthly",
+    "description": "Monthly marketing budget for digital campaigns"
+  },
+  {
+    "id": 2,
+    "category": "Office Supplies",
+    "budgeted_amount": 15000.00,
+    "spent_amount": 8900.00,
+    "period": "Monthly",
+    "description": "Office supplies and stationery budget"
+  },
+  {
+    "id": 3,
+    "category": "Employee Training",
+    "budgeted_amount": 25000.00,
+    "spent_amount": 18000.00,
+    "period": "Quarterly",
+    "description": "Quarterly employee training and development budget"
+  },
+  {
+    "id": 4,
+    "category": "IT Infrastructure",
+    "budgeted_amount": 100000.00,
+    "spent_amount": 75000.00,
+    "period": "Yearly",
+    "description": "Annual IT infrastructure and software budget"
+  },
+  {
+    "id": 5,
+    "category": "Travel & Entertainment",
+    "budgeted_amount": 30000.00,
+    "spent_amount": 22000.00,
+    "period": "Monthly",
+    "description": "Business travel and client entertainment budget"
+  },
+  {
+    "id": 6,
+    "category": "Utilities",
+    "budgeted_amount": 20000.00,
+    "spent_amount": 18500.00,
+    "period": "Monthly",
+    "description": "Office utilities and maintenance budget"
+  }
+]

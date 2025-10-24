@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block title %}Business Management System - Main Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="text-center mb-5">
+            <h1 class="display-4 text-primary">
+                <i class="bi bi-building"></i> Business Management System
+            </h1>
+            <p class="lead text-muted">Comprehensive business suite for managing all aspects of your organization</p>
+        </div>
+        
+        {% if session.get('user_id') %}
+        <div class="alert alert-success">
+            <h5><i class="bi bi-person-check"></i> Welcome, {{ session.get('username') }}!</h5>
+            <p class="mb-0">You are logged in as <strong>{{ session.get('role') }}</strong>. Select a module to continue.</p>
+        </div>
+
+        <!-- Module Navigation Cards -->
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm border-primary">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-people-fill text-primary" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="card-title text-primary">HR Module</h4>
+                        <p class="card-text">Employee management, payroll, attendance, leaves, and recruitment</p>
+                        <div class="mt-auto">
+                            <a href="{{ url_for('hr.dashboard') }}" class="btn btn-primary btn-lg w-100">
+                                <i class="bi bi-arrow-right-circle"></i> Go to HR
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-cash-stack text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="card-title text-success">Finance Module</h4>
+                        <p class="card-text">General ledger, budgets, accounts payable/receivable, and financial reports</p>
+                        <div class="mt-auto">
+                            <a href="{{ url_for('finance.dashboard') }}" class="btn btn-success btn-lg w-100">
+                                <i class="bi bi-arrow-right-circle"></i> Go to Finance
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm border-warning">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-telephone-fill text-warning" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="card-title text-warning">CRM Module</h4>
+                        <p class="card-text">Customer management, sales pipeline, support tickets, and feedback</p>
+                        <div class="mt-auto">
+                            <a href="{{ url_for('crm.dashboard') }}" class="btn btn-warning btn-lg w-100">
+                                <i class="bi bi-arrow-right-circle"></i> Go to CRM
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm border-info">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-box-seam text-info" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="card-title text-info">Trading Module</h4>
+                        <p class="card-text">Product management, orders, warehouse, and logistics tracking</p>
+                        <div class="mt-auto">
+                            <a href="{{ url_for('trading.dashboard') }}" class="btn btn-info btn-lg w-100">
+                                <i class="bi bi-arrow-right-circle"></i> Go to Trading
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Access Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Quick Access</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-light">
+                            <div class="card-body text-center">
+                                <i class="bi bi-speedometer2 text-primary" style="font-size: 2rem;"></i>
+                                <h6 class="mt-2">System Overview</h6>
+                                <p class="text-muted small">View system-wide statistics and performance metrics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-light">
+                            <div class="card-body text-center">
+                                <i class="bi bi-gear text-secondary" style="font-size: 2rem;"></i>
+                                <h6 class="mt-2">Settings</h6>
+                                <p class="text-muted small">Configure system settings and user preferences</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-light">
+                            <div class="card-body text-center">
+                                <i class="bi bi-question-circle text-info" style="font-size: 2rem;"></i>
+                                <h6 class="mt-2">Help & Support</h6>
+                                <p class="text-muted small">Access documentation and get technical support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-warning text-center">
+            <h5><i class="bi bi-exclamation-triangle"></i> Please Log In</h5>
+            <p>You need to log in to access the Business Management System.</p>
+            <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">
+                <i class="bi bi-box-arrow-in-right"></i> Go to Login
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- System Information Footer -->
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card border-light">
+            <div class="card-body text-center">
+                <h6 class="text-muted">Business Management System v1.0</h6>
+                <p class="text-muted small mb-0">
+                    Developed by Codecraft Studios Pakistan (CSP) | 
+                    Powered by Flask & Bootstrap
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

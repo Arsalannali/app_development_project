@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "customer_id": 1,
+    "customer_name": "TechCorp Solutions",
+    "subject": "Software Installation Issue",
+    "description": "Having trouble installing the latest software update on our systems",
+    "priority": "Medium",
+    "status": "Open",
+    "notes": "Customer reported installation errors on Windows 10 systems",
+    "created_date": "2025-10-24"
+  },
+  {
+    "id": 2,
+    "customer_id": 2,
+    "customer_name": "Global Industries Ltd",
+    "subject": "Performance Optimization Request",
+    "description": "Need help optimizing our database performance",
+    "priority": "High",
+    "status": "In Progress",
+    "notes": "Database queries are running slowly, affecting business operations",
+    "created_date": "2025-10-23"
+  },
+  {
+    "id": 3,
+    "customer_id": 3,
+    "customer_name": "StartupXYZ Inc",
+    "subject": "Feature Enhancement Request",
+    "description": "Requesting additional features for our marketing platform",
+    "priority": "Low",
+    "status": "Open",
+    "notes": "Customer wants to add social media integration features",
+    "created_date": "2025-10-22"
+  },
+  {
+    "id": 4,
+    "customer_id": 4,
+    "customer_name": "Enterprise Solutions",
+    "subject": "System Integration Support",
+    "description": "Need assistance with API integration issues",
+    "priority": "High",
+    "status": "Closed",
+    "notes": "API integration completed successfully",
+    "created_date": "2025-10-21"
+  },
+  {
+    "id": 5,
+    "customer_id": 5,
+    "customer_name": "Small Business Corp",
+    "subject": "Website Performance Issue",
+    "description": "Website is loading slowly and affecting user experience",
+    "priority": "Medium",
+    "status": "In Progress",
+    "notes": "Working on optimizing website performance",
+    "created_date": "2025-10-20"
+  },
+  {
+    "id": 6,
+    "customer_id": 6,
+    "customer_name": "Innovation Hub",
+    "subject": "Training Material Request",
+    "description": "Need updated training materials for new employees",
+    "priority": "Low",
+    "status": "Open",
+    "notes": "Customer requesting updated training documentation",
+    "created_date": "2025-10-19"
+  }
+]

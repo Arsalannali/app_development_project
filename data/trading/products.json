@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "code": "PROD-001",
+    "name": "Laptop Computer",
+    "category": "Electronics",
+    "price": 85000.00,
+    "stock": 25,
+    "status": "Active",
+    "description": "High-performance laptop for business use"
+  },
+  {
+    "id": 2,
+    "code": "PROD-002",
+    "name": "Office Chair",
+    "category": "Furniture",
+    "price": 15000.00,
+    "stock": 50,
+    "status": "Active",
+    "description": "Ergonomic office chair with lumbar support"
+  },
+  {
+    "id": 3,
+    "code": "PROD-003",
+    "name": "Printer",
+    "category": "Electronics",
+    "price": 25000.00,
+    "stock": 15,
+    "status": "Active",
+    "description": "Multifunction laser printer for office use"
+  },
+  {
+    "id": 4,
+    "code": "PROD-004",
+    "name": "Desk",
+    "category": "Furniture",
+    "price": 20000.00,
+    "stock": 30,
+    "status": "Active",
+    "description": "Executive desk with drawers"
+  },
+  {
+    "id": 5,
+    "code": "PROD-005",
+    "name": "Monitor",
+    "category": "Electronics",
+    "price": 35000.00,
+    "stock": 40,
+    "status": "Active",
+    "description": "27-inch 4K monitor for professional use"
+  },
+  {
+    "id": 6,
+    "code": "PROD-006",
+    "name": "Office Supplies Kit",
+    "category": "Supplies",
+    "price": 2500.00,
+    "stock": 100,
+    "status": "Active",
+    "description": "Complete office supplies kit including pens, papers, and folders"
+  }
+]

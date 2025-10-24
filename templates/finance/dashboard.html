@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Finance Dashboard - Business Management System{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-cash-stack text-success"></i> Finance Module Dashboard</h1>
+            <a href="{{ url_for('main_dashboard') }}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Main Dashboard
+            </a>
+        </div>
+        
+        {% if session.get('user_id') %}
+        <div class="alert alert-info">
+            <h5><i class="bi bi-info-circle"></i> Welcome to Finance Module</h5>
+            <p class="mb-0">You are logged in as <strong>{{ session.get('role') }}</strong> in the Finance Module.</p>
+        </div>
+
+        <!-- Finance Statistics Cards -->
+        <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-success h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-arrow-up-circle" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">${{ "%.2f"|format(total_revenue) }}</h3>
+                        <p class="mb-0">Total Revenue</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-danger h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-arrow-down-circle" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">${{ "%.2f"|format(total_expenses) }}</h3>
+                        <p class="mb-0">Total Expenses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-primary h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-graph-up" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">${{ "%.2f"|format(net_balance) }}</h3>
+                        <p class="mb-0">Net Balance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-warning h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-clock" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">{{ pending_payables }}</h3>
+                        <p class="mb-0">Pending Payables</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Finance Module Actions -->
+        <div class="row mt-4">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-journal-text text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">General Ledger</h5>
+                        <p class="card-text">Manage financial transactions and ledger entries.</p>
+                        <a href="{{ url_for('finance.ledger_list') }}" class="btn btn-primary">
+                            <i class="bi bi-arrow-right-circle"></i> View Ledger
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-piggy-bank text-success" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Budget Management</h5>
+                        <p class="card-text">Create and track budgets for different categories.</p>
+                        <a href="{{ url_for('finance.budgets_list') }}" class="btn btn-success">
+                            <i class="bi bi-arrow-right-circle"></i> Manage Budgets
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-credit-card text-warning" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Accounts Payable</h5>
+                        <p class="card-text">Track and manage outstanding payments to vendors.</p>
+                        <a href="{{ url_for('finance.payables_list') }}" class="btn btn-warning">
+                            <i class="bi bi-arrow-right-circle"></i> View Payables
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-receipt text-info" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Accounts Receivable</h5>
+                        <p class="card-text">Track and manage outstanding payments from customers.</p>
+                        <a href="{{ url_for('finance.receivables_list') }}" class="btn btn-info">
+                            <i class="bi bi-arrow-right-circle"></i> View Receivables
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-graph-up text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Financial Reports</h5>
+                        <p class="card-text">Generate comprehensive financial reports and analytics.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="bi bi-arrow-right-circle"></i> View Reports
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            <h5><i class="bi bi-exclamation-triangle"></i> Please Log In</h5>
+            <p>You need to log in to access the Finance module.</p>
+            <a href="{{ url_for('login') }}" class="btn btn-primary">
+                <i class="bi bi-box-arrow-in-right"></i> Go to Login
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

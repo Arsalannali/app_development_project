@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "customer_id": 1,
+    "customer_name": "TechCorp Solutions",
+    "product_service": "Software Development Services",
+    "amount": 25000.00,
+    "date": "2025-10-20",
+    "description": "Custom software development project",
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "customer_id": 2,
+    "customer_name": "Global Industries Ltd",
+    "product_service": "Consulting Services",
+    "amount": 15000.00,
+    "date": "2025-10-18",
+    "description": "Business process optimization consulting",
+    "status": "Completed"
+  },
+  {
+    "id": 3,
+    "customer_id": 3,
+    "customer_name": "StartupXYZ Inc",
+    "product_service": "Digital Marketing Campaign",
+    "amount": 18000.00,
+    "date": "2025-10-15",
+    "description": "Social media marketing campaign",
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "customer_id": 4,
+    "customer_name": "Enterprise Solutions",
+    "product_service": "System Integration",
+    "amount": 35000.00,
+    "date": "2025-10-12",
+    "description": "ERP system integration project",
+    "status": "Completed"
+  },
+  {
+    "id": 5,
+    "customer_id": 5,
+    "customer_name": "Small Business Corp",
+    "product_service": "Website Development",
+    "amount": 8500.00,
+    "date": "2025-10-10",
+    "description": "E-commerce website development",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "customer_id": 6,
+    "customer_name": "Innovation Hub",
+    "product_service": "Training Services",
+    "amount": 12000.00,
+    "date": "2025-10-08",
+    "description": "Employee training and development program",
+    "status": "Pending"
+  }
+]

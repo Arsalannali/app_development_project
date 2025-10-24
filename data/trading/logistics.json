@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "order_id": 1,
+    "shipping_method": "Express",
+    "tracking_number": "TRK-2025-001",
+    "status": "Delivered",
+    "ship_date": "2025-10-20",
+    "delivery_date": "2025-10-22",
+    "notes": "Delivered to TechCorp Solutions office"
+  },
+  {
+    "id": 2,
+    "order_id": 2,
+    "shipping_method": "Standard",
+    "tracking_number": "TRK-2025-002",
+    "status": "In Transit",
+    "ship_date": "2025-10-22",
+    "delivery_date": null,
+    "notes": "Shipped to Global Industries Ltd"
+  },
+  {
+    "id": 3,
+    "order_id": 3,
+    "shipping_method": "Standard",
+    "tracking_number": "TRK-2025-003",
+    "status": "Processing",
+    "ship_date": "2025-10-24",
+    "delivery_date": null,
+    "notes": "Preparing shipment for StartupXYZ Inc"
+  },
+  {
+    "id": 4,
+    "order_id": 4,
+    "shipping_method": "Express",
+    "tracking_number": "TRK-2025-004",
+    "status": "Delivered",
+    "ship_date": "2025-10-18",
+    "delivery_date": "2025-10-20",
+    "notes": "Delivered to Enterprise Solutions"
+  },
+  {
+    "id": 5,
+    "order_id": 5,
+    "shipping_method": "Standard",
+    "tracking_number": "TRK-2025-005",
+    "status": "Shipped",
+    "ship_date": "2025-10-23",
+    "delivery_date": null,
+    "notes": "Shipped to Small Business Corp"
+  },
+  {
+    "id": 6,
+    "order_id": 6,
+    "shipping_method": "Standard",
+    "tracking_number": "TRK-2025-006",
+    "status": "Processing",
+    "ship_date": "2025-10-25",
+    "delivery_date": null,
+    "notes": "Preparing shipment for Innovation Hub"
+  }
+]

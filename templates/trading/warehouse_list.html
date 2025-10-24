@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Warehouse - Trading Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-building"></i> Warehouse Management</h1>
+            <a href="{{ url_for('trading.warehouse_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add Item
+            </a>
+        </div>
+
+        {% if warehouse_items %}
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Product</th>
+                                <th>Location</th>
+                                <th>Quantity</th>
+                                <th>Min Stock</th>
+                                <th>Status</th>
+                                <th>Last Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in warehouse_items %}
+                            <tr>
+                                <td>{{ item.product_name }}</td>
+                                <td>{{ item.location }}</td>
+                                <td>
+                                    {% if item.quantity > item.min_stock %}
+                                        <span class="badge bg-success">{{ item.quantity }}</span>
+                                    {% elif item.quantity > 0 %}
+                                        <span class="badge bg-warning">{{ item.quantity }}</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">{{ item.quantity }}</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ item.min_stock }}</td>
+                                <td>
+                                    {% if item.quantity > item.min_stock %}
+                                        <span class="badge bg-success">In Stock</span>
+                                    {% elif item.quantity > 0 %}
+                                        <span class="badge bg-warning">Low Stock</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">Out of Stock</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ item.last_updated }}</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('trading.warehouse_edit', item_id=item.id) }}" 
+                                           class="btn btn-warning" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <form method="POST" action="{{ url_for('trading.warehouse_delete', item_id=item.id) }}" 
+                                              class="d-inline" onsubmit="return confirm('Are you sure you want to delete this warehouse item?');">
+                                            <button type="submit" class="btn btn-danger" title="Delete">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            <h5><i class="bi bi-info-circle"></i> No Warehouse Items Found</h5>
+            <p>No warehouse items found. Start by adding your first warehouse item.</p>
+            <a href="{{ url_for('trading.warehouse_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add First Warehouse Item
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

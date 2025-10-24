@@ -8,10 +8,42 @@
     "active": true
   },
   {
+    "user_id": 0,
+    "username": "test",
+    "password_hash": "$2b$12$bt1rR67Fa8In.XfCyClejOd3nf/jNWKDVAIPEKGxeMLncMGwP8v62",
+    "role": "Admin",
+    "employee_id": null,
+    "active": true
+  },
+  {
     "user_id": 2,
     "username": "hr_staff",
     "password_hash": "$2b$12$bt1rR67Fa8In.XfCyClejOd3nf/jNWKDVAIPEKGxeMLncMGwP8v62",
     "role": "HR Staff",
+    "employee_id": null,
+    "active": true
+  },
+  {
+    "user_id": -1,
+    "username": "finance",
+    "password_hash": "$2b$12$bt1rR67Fa8In.XfCyClejOd3nf/jNWKDVAIPEKGxeMLncMGwP8v62",
+    "role": "Finance Staff",
+    "employee_id": null,
+    "active": true
+  },
+  {
+    "user_id": -2,
+    "username": "crm",
+    "password_hash": "$2b$12$bt1rR67Fa8In.XfCyClejOd3nf/jNWKDVAIPEKGxeMLncMGwP8v62",
+    "role": "CRM Staff",
+    "employee_id": null,
+    "active": true
+  },
+  {
+    "user_id": -3,
+    "username": "trading",
+    "password_hash": "$2b$12$bt1rR67Fa8In.XfCyClejOd3nf/jNWKDVAIPEKGxeMLncMGwP8v62",
+    "role": "Trading Staff",
     "employee_id": null,
     "active": true
   },

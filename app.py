@@ -28,6 +28,12 @@ from functools import wraps  # For creating decorators
 from datetime import datetime  # For date/time operations
 from werkzeug.utils import secure_filename  # For secure file uploads
 
+# Import module blueprints
+from modules.hr.routes import hr_bp
+from modules.finance.routes import finance_bp
+from modules.crm.routes import crm_bp
+from modules.trading.routes import trading_bp
+
 # =============================================================================
 # APPLICATION INITIALIZATION
 # =============================================================================
@@ -35,18 +41,27 @@ app = Flask(__name__)
 app.secret_key = 'your-secret-key-change-in-production'  # Change this in production!
 
 # =============================================================================
+# BLUEPRINT REGISTRATION
+# =============================================================================
+# Register all module blueprints
+app.register_blueprint(hr_bp, url_prefix='/hr')
+app.register_blueprint(finance_bp, url_prefix='/finance')
+app.register_blueprint(crm_bp, url_prefix='/crm')
+app.register_blueprint(trading_bp, url_prefix='/trading')
+
+# =============================================================================
 # DATA FILE PATHS
 # =============================================================================
 # All data is stored in JSON files in the 'data' directory
 DATA_DIR = 'data'
-EMPLOYEES_FILE = os.path.join(DATA_DIR, 'employees.json')
 USERS_FILE = os.path.join(DATA_DIR, 'users.json')
-DEPARTMENTS_FILE = os.path.join(DATA_DIR, 'departments.json')
-ATTENDANCE_FILE = os.path.join(DATA_DIR, 'attendance.json')
-LEAVES_FILE = os.path.join(DATA_DIR, 'leaves.json')
-PAYROLLS_FILE = os.path.join(DATA_DIR, 'payrolls.json')
-JOBS_FILE = os.path.join(DATA_DIR, 'jobs.json')
-APPLICANTS_FILE = os.path.join(DATA_DIR, 'applicants.json')
+EMPLOYEES_FILE = os.path.join(DATA_DIR, 'hr', 'employees.json')
+DEPARTMENTS_FILE = os.path.join(DATA_DIR, 'hr', 'departments.json')
+ATTENDANCE_FILE = os.path.join(DATA_DIR, 'hr', 'attendance.json')
+LEAVES_FILE = os.path.join(DATA_DIR, 'hr', 'leaves.json')
+PAYROLLS_FILE = os.path.join(DATA_DIR, 'hr', 'payrolls.json')
+JOBS_FILE = os.path.join(DATA_DIR, 'hr', 'jobs.json')
+APPLICANTS_FILE = os.path.join(DATA_DIR, 'hr', 'applicants.json')
 SETTINGS_FILE = os.path.join(DATA_DIR, 'settings.json')
 FILES_DIR = os.path.join(DATA_DIR, 'files')
 
@@ -1294,5 +1309,5 @@ if __name__ == '__main__':
     # - port=5002: Run on port 5002
     # - host='0.0.0.0': Make server accessible from network
     # - use_reloader=False: Disable auto-reload (prevents duplicate processes)
-    app.run(debug=True, port=5002, host='0.0.0.0', use_reloader=False)
+    app.run(debug=True, port=5003, host='0.0.0.0', use_reloader=False)
 

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "TechCorp Solutions",
+    "email": "contact@techcorp.com",
+    "phone": "+92-300-1234567",
+    "company": "TechCorp Solutions",
+    "address": "123 Business District, Karachi, Pakistan",
+    "status": "Active",
+    "notes": "Major client with ongoing projects"
+  },
+  {
+    "id": 2,
+    "name": "Global Industries Ltd",
+    "email": "info@globalindustries.com",
+    "phone": "+92-300-2345678",
+    "company": "Global Industries Ltd",
+    "address": "456 Industrial Area, Lahore, Pakistan",
+    "status": "Active",
+    "notes": "Long-term partnership client"
+  },
+  {
+    "id": 3,
+    "name": "StartupXYZ Inc",
+    "email": "hello@startupxyz.com",
+    "phone": "+92-300-3456789",
+    "company": "StartupXYZ Inc",
+    "address": "789 Innovation Hub, Islamabad, Pakistan",
+    "status": "Active",
+    "notes": "Fast-growing startup client"
+  },
+  {
+    "id": 4,
+    "name": "Enterprise Solutions",
+    "email": "sales@enterprisesolutions.com",
+    "phone": "+92-300-4567890",
+    "company": "Enterprise Solutions",
+    "address": "321 Corporate Plaza, Karachi, Pakistan",
+    "status": "Active",
+    "notes": "Enterprise-level client with complex requirements"
+  },
+  {
+    "id": 5,
+    "name": "Small Business Corp",
+    "email": "contact@smallbusiness.com",
+    "phone": "+92-300-5678901",
+    "company": "Small Business Corp",
+    "address": "654 Main Street, Faisalabad, Pakistan",
+    "status": "Active",
+    "notes": "Small business client with potential for growth"
+  },
+  {
+    "id": 6,
+    "name": "Innovation Hub",
+    "email": "info@innovationhub.com",
+    "phone": "+92-300-6789012",
+    "company": "Innovation Hub",
+    "address": "987 Tech Park, Rawalpindi, Pakistan",
+    "status": "Inactive",
+    "notes": "Previous client, project completed"
+  }
+]

@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}CRM Dashboard - Business Management System{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-telephone-fill text-warning"></i> CRM Module Dashboard</h1>
+            <a href="{{ url_for('main_dashboard') }}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Main Dashboard
+            </a>
+        </div>
+        
+        {% if session.get('user_id') %}
+        <div class="alert alert-info">
+            <h5><i class="bi bi-info-circle"></i> Welcome to CRM Module</h5>
+            <p class="mb-0">You are logged in as <strong>{{ session.get('role') }}</strong> in the CRM Module.</p>
+        </div>
+
+        <!-- CRM Statistics Cards -->
+        <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-primary h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people-fill" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">{{ total_customers }}</h3>
+                        <p class="mb-0">Total Customers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-success h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-graph-up" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">{{ total_sales }}</h3>
+                        <p class="mb-0">Total Sales</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-warning h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-ticket-perforated" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">{{ active_tickets }}</h3>
+                        <p class="mb-0">Active Tickets</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-info h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cash-stack" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">${{ "%.2f"|format(total_revenue) }}</h3>
+                        <p class="mb-0">Total Revenue</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CRM Module Actions -->
+        <div class="row mt-4">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Customer Management</h5>
+                        <p class="card-text">Manage customer information and relationships.</p>
+                        <a href="{{ url_for('crm.customers_list') }}" class="btn btn-primary">
+                            <i class="bi bi-arrow-right-circle"></i> View Customers
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-graph-up text-success" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Sales Pipeline</h5>
+                        <p class="card-text">Track sales opportunities and manage the sales process.</p>
+                        <a href="{{ url_for('crm.sales_list') }}" class="btn btn-success">
+                            <i class="bi bi-arrow-right-circle"></i> View Sales
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-headset text-warning" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Support Tickets</h5>
+                        <p class="card-text">Manage customer support requests and issues.</p>
+                        <a href="{{ url_for('crm.tickets_list') }}" class="btn btn-warning">
+                            <i class="bi bi-arrow-right-circle"></i> View Tickets
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-star text-info" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Customer Feedback</h5>
+                        <p class="card-text">Collect and manage customer feedback and ratings.</p>
+                        <a href="{{ url_for('crm.feedback_list') }}" class="btn btn-info">
+                            <i class="bi bi-arrow-right-circle"></i> View Feedback
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-bar-chart text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Analytics & Reports</h5>
+                        <p class="card-text">View customer analytics and generate reports.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="bi bi-arrow-right-circle"></i> View Analytics
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            <h5><i class="bi bi-exclamation-triangle"></i> Please Log In</h5>
+            <p>You need to log in to access the CRM module.</p>
+            <a href="{{ url_for('login') }}" class="btn btn-primary">
+                <i class="bi bi-box-arrow-in-right"></i> Go to Login
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

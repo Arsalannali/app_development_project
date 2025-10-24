@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Trading Dashboard - Business Management System{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-box-seam text-info"></i> Trading Module Dashboard</h1>
+            <a href="{{ url_for('main_dashboard') }}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Main Dashboard
+            </a>
+        </div>
+        
+        {% if session.get('user_id') %}
+        <div class="alert alert-info">
+            <h5><i class="bi bi-info-circle"></i> Welcome to Trading Module</h5>
+            <p class="mb-0">You are logged in as <strong>{{ session.get('role') }}</strong> in the Trading Module.</p>
+        </div>
+
+        <!-- Trading Statistics Cards -->
+        <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-primary h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-box" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">{{ total_products }}</h3>
+                        <p class="mb-0">Total Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-success h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cart-check" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">{{ total_orders }}</h3>
+                        <p class="mb-0">Total Orders</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-warning h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-exclamation-triangle" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">{{ low_stock_items }}</h3>
+                        <p class="mb-0">Low Stock Items</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-bg-info h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-clock" style="font-size: 2.5rem;"></i>
+                        <h3 class="mt-2">{{ pending_orders }}</h3>
+                        <p class="mb-0">Pending Orders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trading Module Actions -->
+        <div class="row mt-4">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-box-seam text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Product Management</h5>
+                        <p class="card-text">Manage product catalog and inventory information.</p>
+                        <a href="{{ url_for('trading.products_list') }}" class="btn btn-primary">
+                            <i class="bi bi-arrow-right-circle"></i> View Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cart text-success" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Order Management</h5>
+                        <p class="card-text">Process and track customer orders.</p>
+                        <a href="{{ url_for('trading.orders_list') }}" class="btn btn-success">
+                            <i class="bi bi-arrow-right-circle"></i> View Orders
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-warehouse text-warning" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Warehouse Management</h5>
+                        <p class="card-text">Track inventory levels and warehouse operations.</p>
+                        <a href="{{ url_for('trading.warehouse_list') }}" class="btn btn-warning">
+                            <i class="bi bi-arrow-right-circle"></i> View Warehouse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-truck text-info" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Logistics Tracking</h5>
+                        <p class="card-text">Track shipments and delivery status.</p>
+                        <a href="{{ url_for('trading.logistics_list') }}" class="btn btn-info">
+                            <i class="bi bi-arrow-right-circle"></i> View Logistics
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-graph-up text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3">Analytics & Reports</h5>
+                        <p class="card-text">View trading analytics and generate reports.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="bi bi-arrow-right-circle"></i> View Analytics
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            <h5><i class="bi bi-exclamation-triangle"></i> Please Log In</h5>
+            <p>You need to log in to access the Trading module.</p>
+            <a href="{{ url_for('login') }}" class="btn btn-primary">
+                <i class="bi bi-box-arrow-in-right"></i> Go to Login
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

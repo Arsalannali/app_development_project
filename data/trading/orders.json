@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "customer_name": "TechCorp Solutions",
+    "product_id": 1,
+    "product_name": "Laptop Computer",
+    "quantity": 5,
+    "total": 425000.00,
+    "status": "Completed",
+    "date": "2025-10-20",
+    "notes": "Bulk order for new employees"
+  },
+  {
+    "id": 2,
+    "customer_name": "Global Industries Ltd",
+    "product_id": 2,
+    "product_name": "Office Chair",
+    "quantity": 20,
+    "total": 300000.00,
+    "status": "Processing",
+    "date": "2025-10-22",
+    "notes": "Office furniture upgrade"
+  },
+  {
+    "id": 3,
+    "customer_name": "StartupXYZ Inc",
+    "product_id": 3,
+    "product_name": "Printer",
+    "quantity": 3,
+    "total": 75000.00,
+    "status": "Pending",
+    "date": "2025-10-24",
+    "notes": "New office setup"
+  },
+  {
+    "id": 4,
+    "customer_name": "Enterprise Solutions",
+    "product_id": 4,
+    "product_name": "Desk",
+    "quantity": 10,
+    "total": 200000.00,
+    "status": "Completed",
+    "date": "2025-10-18",
+    "notes": "Executive office furniture"
+  },
+  {
+    "id": 5,
+    "customer_name": "Small Business Corp",
+    "product_id": 5,
+    "product_name": "Monitor",
+    "quantity": 8,
+    "total": 280000.00,
+    "status": "Processing",
+    "date": "2025-10-23",
+    "notes": "Display upgrade for workstations"
+  },
+  {
+    "id": 6,
+    "customer_name": "Innovation Hub",
+    "product_id": 6,
+    "product_name": "Office Supplies Kit",
+    "quantity": 25,
+    "total": 62500.00,
+    "status": "Pending",
+    "date": "2025-10-25",
+    "notes": "Monthly supplies order"
+  }
+]

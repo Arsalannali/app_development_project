@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Customers - CRM Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-people"></i> Customer Management</h1>
+            <a href="{{ url_for('crm.customer_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add Customer
+            </a>
+        </div>
+
+        {% if customers %}
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Company</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for customer in customers %}
+                            <tr>
+                                <td>{{ customer.name }}</td>
+                                <td>{{ customer.email }}</td>
+                                <td>{{ customer.phone }}</td>
+                                <td>{{ customer.company }}</td>
+                                <td>
+                                    {% if customer.status == 'Active' %}
+                                        <span class="badge bg-success">Active</span>
+                                    {% else %}
+                                        <span class="badge bg-secondary">{{ customer.status }}</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('crm.customer_edit', customer_id=customer.id) }}" 
+                                           class="btn btn-warning" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <form method="POST" action="{{ url_for('crm.customer_delete', customer_id=customer.id) }}" 
+                                              class="d-inline" onsubmit="return confirm('Are you sure you want to delete this customer?');">
+                                            <button type="submit" class="btn btn-danger" title="Delete">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            <h5><i class="bi bi-info-circle"></i> No Customers Found</h5>
+            <p>No customers found. Start by adding your first customer.</p>
+            <a href="{{ url_for('crm.customer_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add First Customer
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Customer Feedback - CRM Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-chat-dots"></i> Customer Feedback</h1>
+            <a href="{{ url_for('crm.feedback_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add Feedback
+            </a>
+        </div>
+
+        {% if feedback %}
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Customer</th>
+                                <th>Rating</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in feedback %}
+                            <tr>
+                                <td>{{ item.customer_name }}</td>
+                                <td>
+                                    {% for i in range(5) %}
+                                        {% if i < item.rating %}
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        {% else %}
+                                            <i class="bi bi-star text-muted"></i>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <span class="ms-2">{{ item.rating }}/5</span>
+                                </td>
+                                <td>{{ item.subject }}</td>
+                                <td>{{ item.date }}</td>
+                                <td>
+                                    {% if item.status == 'Reviewed' %}
+                                        <span class="badge bg-success">Reviewed</span>
+                                    {% else %}
+                                        <span class="badge bg-warning">Pending</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('crm.feedback_edit', feedback_id=item.id) }}" 
+                                           class="btn btn-warning" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <form method="POST" action="{{ url_for('crm.feedback_delete', feedback_id=item.id) }}" 
+                                              class="d-inline" onsubmit="return confirm('Are you sure you want to delete this feedback?');">
+                                            <button type="submit" class="btn btn-danger" title="Delete">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            <h5><i class="bi bi-info-circle"></i> No Feedback Found</h5>
+            <p>No customer feedback found. Start by adding your first feedback.</p>
+            <a href="{{ url_for('crm.feedback_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add First Feedback
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

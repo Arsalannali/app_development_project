@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Accounts Receivable - Finance Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-cash-stack"></i> Accounts Receivable</h1>
+            <a href="{{ url_for('finance.receivable_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add Receivable
+            </a>
+        </div>
+
+        {% if receivables %}
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Customer</th>
+                                <th>Invoice Number</th>
+                                <th>Amount</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for receivable in receivables %}
+                            <tr>
+                                <td>{{ receivable.customer }}</td>
+                                <td>{{ receivable.invoice_number }}</td>
+                                <td>${{ receivable.amount }}</td>
+                                <td>{{ receivable.due_date }}</td>
+                                <td>
+                                    {% if receivable.status == 'Paid' %}
+                                        <span class="badge bg-success">Paid</span>
+                                    {% elif receivable.status == 'Overdue' %}
+                                        <span class="badge bg-danger">Overdue</span>
+                                    {% else %}
+                                        <span class="badge bg-warning">Pending</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('finance.receivable_edit', receivable_id=receivable.id) }}" 
+                                           class="btn btn-warning" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <form method="POST" action="{{ url_for('finance.receivable_delete', receivable_id=receivable.id) }}" 
+                                              class="d-inline" onsubmit="return confirm('Are you sure you want to delete this receivable?');">
+                                            <button type="submit" class="btn btn-danger" title="Delete">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            <h5><i class="bi bi-info-circle"></i> No Receivables Found</h5>
+            <p>No accounts receivable records found. Start by adding your first receivable.</p>
+            <a href="{{ url_for('finance.receivable_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add First Receivable
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

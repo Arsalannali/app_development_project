@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Sales - CRM Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-graph-up"></i> Sales Management</h1>
+            <a href="{{ url_for('crm.sale_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add Sale
+            </a>
+        </div>
+
+        {% if sales %}
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Customer</th>
+                                <th>Product/Service</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for sale in sales %}
+                            <tr>
+                                <td>{{ sale.customer_name }}</td>
+                                <td>{{ sale.product_service }}</td>
+                                <td>${{ sale.amount }}</td>
+                                <td>{{ sale.date }}</td>
+                                <td>
+                                    {% if sale.status == 'Completed' %}
+                                        <span class="badge bg-success">Completed</span>
+                                    {% elif sale.status == 'Pending' %}
+                                        <span class="badge bg-warning">Pending</span>
+                                    {% else %}
+                                        <span class="badge bg-secondary">{{ sale.status }}</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('crm.sale_edit', sale_id=sale.id) }}" 
+                                           class="btn btn-warning" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <form method="POST" action="{{ url_for('crm.sale_delete', sale_id=sale.id) }}" 
+                                              class="d-inline" onsubmit="return confirm('Are you sure you want to delete this sale?');">
+                                            <button type="submit" class="btn btn-danger" title="Delete">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            <h5><i class="bi bi-info-circle"></i> No Sales Found</h5>
+            <p>No sales records found. Start by adding your first sale.</p>
+            <a href="{{ url_for('crm.sale_add') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add First Sale
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

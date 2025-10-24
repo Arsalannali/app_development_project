@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}{% if product %}Edit{% else %}Add{% endif %} Product - Trading Module{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="bi bi-box"></i> {% if product %}Edit{% else %}Add{% endif %} Product</h1>
+            <a href="{{ url_for('trading.products_list') }}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Products
+            </a>
+        </div>
+
+        <div class="card shadow">
+            <div class="card-body">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="code" class="form-label">Product Code</label>
+                                <input type="text" class="form-control" id="code" name="code" 
+                                       value="{{ product.code if product else '' }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Product Name</label>
+                                <input type="text" class="form-control" id="name" name="name" 
+                                       value="{{ product.name if product else '' }}" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Category</label>
+                                <input type="text" class="form-control" id="category" name="category" 
+                                       value="{{ product.category if product else '' }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" id="price" name="price" 
+                                           value="{{ product.price if product else '' }}" step="0.01" min="0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="stock" class="form-label">Stock Quantity</label>
+                                <input type="number" class="form-control" id="stock" name="stock" 
+                                       value="{{ product.stock if product else '' }}" min="0" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="status" class="form-label">Status</label>
+                                <select class="form-select" id="status" name="status" required>
+                                    <option value="">Select Status</option>
+                                    <option value="Active" {% if product and product.status == 'Active' %}selected{% endif %}>Active</option>
+                                    <option value="Inactive" {% if product and product.status == 'Inactive' %}selected{% endif %}>Inactive</option>
+                                    <option value="Discontinued" {% if product and product.status == 'Discontinued' %}selected{% endif %}>Discontinued</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3">{{ product.description if product else '' }}</textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ url_for('trading.products_list') }}" class="btn btn-secondary me-md-2">Cancel</a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-circle"></i> {% if product %}Update{% else %}Add{% endif %} Product
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

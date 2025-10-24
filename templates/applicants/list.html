@@ -15,14 +15,14 @@
                 </div>
                 <div class="btn-group">
                     {% if current_job %}
-                    <a href="{{ url_for('applicants_list') }}" class="btn btn-outline-secondary">
+                    <a href="{{ url_for('hr.applicants_list') }}" class="btn btn-outline-secondary">
                         <i class="bi bi-x-circle"></i> Clear Filter
                     </a>
                     <a href="{{ url_for('job_view', job_id=current_job.job_id) }}" class="btn btn-outline-info">
                         <i class="bi bi-eye"></i> View Job
                     </a>
                     {% endif %}
-                    <a href="{{ url_for('jobs_list') }}" class="btn btn-outline-primary">
+                    <a href="{{ url_for('hr.jobs_list') }}" class="btn btn-outline-primary">
                         <i class="bi bi-briefcase"></i> View Jobs
                     </a>
                 </div>
@@ -101,18 +101,18 @@
                                     </td>
                                     <td>
                                         <div class="btn-group" role="group">
-                                            <a href="{{ url_for('applicant_view', applicant_id=applicant.applicant_id) }}" 
+                                            <a href="{{ url_for('hr.applicant_view', applicant_id=applicant.applicant_id) }}" 
                                                class="btn btn-sm btn-outline-primary" title="View Details">
                                                 <i class="bi bi-eye"></i>
                                             </a>
                                             {% if applicant.resume_filename %}
-                                            <a href="{{ url_for('download_resume', filename=applicant.resume_filename) }}" 
+                                            <a href="{{ url_for('hr.download_resume', filename=applicant.resume_filename) }}" 
                                                class="btn btn-sm btn-outline-info" title="Download Resume">
                                                 <i class="bi bi-download"></i>
                                             </a>
                                             {% endif %}
                                             {% if applicant.status in ['Applied', 'Shortlisted', 'Interviewed'] and session.role == 'Admin' %}
-                                            <form method="POST" action="{{ url_for('applicant_delete', applicant_id=applicant.applicant_id) }}" 
+                                            <form method="POST" action="{{ url_for('hr.applicant_delete', applicant_id=applicant.applicant_id) }}" 
                                                   class="d-inline" onsubmit="return confirm('Are you sure you want to delete this applicant?')">
                                                 <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
                                                     <i class="bi bi-trash"></i>
